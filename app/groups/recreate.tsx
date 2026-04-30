@@ -1,1 +1,1 @@
-export { default } from '@/features/groups/screens/RecreateActivityScreen';
+export { default } from '@/features/chat/screens/RecreateActivityScreen';

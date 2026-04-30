@@ -35,12 +35,14 @@ export default function RootLayout() {
   return (
     <AppProviders>
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="(app)" />
+        <Stack.Screen name="(header)" options={{ presentation: 'card' }} />
+        <Stack.Screen name="(auth)" options={{ presentation: 'card' }} />
+        <Stack.Screen name="(details)" options={{ presentation: 'card' }} />
         <Stack.Screen name="listing" options={{ presentation: 'card' }} />
         <Stack.Screen name="profile" options={{ presentation: 'card' }} />
         <Stack.Screen name="settings" options={{ presentation: 'card' }} />
         <Stack.Screen name="groups" options={{ presentation: 'card' }} />
-        <Stack.Screen name="reels" options={{ presentation: 'card' }} />
         <Stack.Screen name="messages" options={{ presentation: 'card' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
