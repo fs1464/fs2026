@@ -5,14 +5,8 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   slug: 'nearly',
   version: '1.0.0',
   orientation: 'portrait',
-  icon: './assets/icon.png',
   scheme: 'nearly',
   userInterfaceStyle: 'light',
-  splash: {
-    image: './assets/splash-icon.png',
-    resizeMode: 'contain',
-    backgroundColor: '#1A1A2E',
-  },
   ios: {
     supportsTablet: false,
     bundleIdentifier: 'com.nearly.app',
@@ -26,10 +20,6 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
     },
   },
   android: {
-    adaptiveIcon: {
-      foregroundImage: './assets/android-icon-foreground.png',
-      backgroundColor: '#1A1A2E',
-    },
     package: 'com.nearly.app',
     permissions: [
       'ACCESS_FINE_LOCATION',
@@ -44,12 +34,11 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   web: {
     bundler: 'metro',
     output: 'static',
-    favicon: './assets/favicon.png',
     name: 'Nearly — Your Neighbourhood App',
     shortName: 'Nearly',
-    description: 'Discover activities, events, businesses, and connect with people in your neighbourhood. Available in Hindi and English.',
-    lang: 'hi',
-    themeColor: '#FF6B35',
+    description: 'Discover activities, events, businesses, and connect with people in your neighbourhood.',
+    lang: 'en',
+    themeColor: '#f97316',
     backgroundColor: '#FFFFFF',
   },
   plugins: [
@@ -74,21 +63,11 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
           'Nearly needs camera access to take photos.',
       },
     ],
-    [
-      'expo-notifications',
-      {
-        icon: './assets/icon.png', // Fallback to icon
-        color: '#1A1A2E',
-      },
-    ],
   ],
   experiments: {
     typedRoutes: true,
   },
   extra: {
-    eas: {
-      projectId: 'YOUR_EAS_PROJECT_ID',
-    },
     supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
     supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
   },
