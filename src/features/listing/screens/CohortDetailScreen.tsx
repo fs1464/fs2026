@@ -1,9 +1,8 @@
 import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
-import { getCohort } from '@/services/funding';
-import { colors, fonts, spacing } from '@/constants/theme';
+import { useCohortDetail } from '@/hooks/queries/funding';
+import { colors, fonts, spacing } from '@/design/tokens';
 import { formatCurrency, formatDate } from '@/utils/format';
 import { Chip } from '@/components/funding/Chip';
 import { DetailHeader } from '@/components/funding/DetailHeader';
@@ -11,7 +10,7 @@ import { DetailSection } from '@/components/funding/DetailSection';
 
 export default function CohortDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const q = useQuery({ queryKey: ['cohort', id], queryFn: () => getCohort(id as string), enabled: !!id });
+  const q = useCohortDetail(id);
 
   const onApply = () => {
     if (q.data?.application_link) Linking.openURL(q.data.application_link).catch(() => {});

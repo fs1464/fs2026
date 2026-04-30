@@ -2,36 +2,27 @@ import { useState } from 'react';
 import { FlatList, Pressable, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
 import { Plus, Search } from 'lucide-react-native';
-import { colors, fonts, spacing } from '@/constants/theme';
+import { colors, fonts, spacing } from '@/design/tokens';
 import { SegmentedTabs, type FundingSegment } from '@/components/funding/SegmentedTabs';
 import { DealCard } from '@/components/funding/DealCard';
 import { CohortCard } from '@/components/funding/CohortCard';
 import { GrantCard } from '@/components/funding/GrantCard';
 import { CardSkeleton } from '@/components/funding/Skeleton';
 import { EmptyState } from '@/components/funding/EmptyState';
-import { listCohorts, listDeals, listGrants } from '@/services/funding';
+import {
+  useCohortsList,
+  useDealsList,
+  useGrantsList,
+} from '@/hooks/queries/funding';
 import type { Cohort, Deal, Grant } from '@/types/funding';
 
 export default function FundingTab() {
   const [segment, setSegment] = useState<FundingSegment>('deals');
 
-  const dealsQ = useQuery({
-    queryKey: ['funding', 'deals'],
-    queryFn: () => listDeals(0),
-    enabled: segment === 'deals',
-  });
-  const cohortsQ = useQuery({
-    queryKey: ['funding', 'cohorts'],
-    queryFn: () => listCohorts(0),
-    enabled: segment === 'cohorts',
-  });
-  const grantsQ = useQuery({
-    queryKey: ['funding', 'grants'],
-    queryFn: () => listGrants(0),
-    enabled: segment === 'grants',
-  });
+  const dealsQ = useDealsList(0, segment === 'deals');
+  const cohortsQ = useCohortsList(0, segment === 'cohorts');
+  const grantsQ = useGrantsList(0, segment === 'grants');
 
   const active =
     segment === 'deals' ? dealsQ : segment === 'cohorts' ? cohortsQ : grantsQ;

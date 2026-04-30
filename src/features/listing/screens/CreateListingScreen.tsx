@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useQueryClient } from '@tanstack/react-query';
-import { colors, fonts, spacing } from '@/constants/theme';
+import { colors, fonts, spacing } from '@/design/tokens';
 import { Field } from '@/components/funding/Field';
 import { DetailHeader } from '@/components/funding/DetailHeader';
-import { createCohort, createDeal, createGrant } from '@/services/funding';
-import { supabase } from '@/lib/supabase';
+import {
+  useCreateCohort,
+  useCreateDeal,
+  useCreateGrant,
+} from '@/hooks/mutations/funding';
+import { supabase } from '@/lib/api/client';
+import { AppError } from '@/errors/domain.errors';
 import type { DealStage } from '@/types/funding';
 
 type CreateType = 'deals' | 'cohorts' | 'grants';
@@ -17,7 +21,9 @@ const STAGES: DealStage[] = ['idea', 'mvp', 'early', 'growth', 'scale'];
 export default function CreateFundingScreen() {
   const { type } = useLocalSearchParams<{ type?: string }>();
   const kind: CreateType = (type === 'cohorts' || type === 'grants' ? type : 'deals') as CreateType;
-  const queryClient = useQueryClient();
+  const createDealM = useCreateDeal();
+  const createCohortM = useCreateCohort();
+  const createGrantM = useCreateGrant();
 
   const [values, setValues] = useState<Record<string, string>>({});
   const [stage, setStage] = useState<DealStage>('idea');
@@ -50,8 +56,8 @@ export default function CreateFundingScreen() {
       }
       if (kind === 'deals') {
         if (!values.business_name?.trim()) throw new Error('Business name is required');
-        await createDeal(
-          {
+        await createDealM.mutateAsync({
+          input: {
             business_name: values.business_name.trim(),
             description: values.description?.trim() ?? '',
             revenue: num(values.revenue),
@@ -63,12 +69,11 @@ export default function CreateFundingScreen() {
             status: 'active',
           },
           userId,
-        );
-        queryClient.invalidateQueries({ queryKey: ['funding', 'deals'] });
+        });
       } else if (kind === 'cohorts') {
         if (!values.program_name?.trim()) throw new Error('Program name is required');
-        await createCohort(
-          {
+        await createCohortM.mutateAsync({
+          input: {
             organization_name: values.organization_name?.trim() ?? '',
             program_name: values.program_name.trim(),
             description: values.description?.trim() ?? '',
@@ -84,12 +89,11 @@ export default function CreateFundingScreen() {
             status: 'active',
           },
           userId,
-        );
-        queryClient.invalidateQueries({ queryKey: ['funding', 'cohorts'] });
+        });
       } else {
         if (!values.title?.trim()) throw new Error('Grant title is required');
-        await createGrant(
-          {
+        await createGrantM.mutateAsync({
+          input: {
             title: values.title.trim(),
             provider_name: values.provider_name?.trim() ?? '',
             description: values.description?.trim() ?? '',
@@ -101,12 +105,16 @@ export default function CreateFundingScreen() {
             status: 'active',
           },
           userId,
-        );
-        queryClient.invalidateQueries({ queryKey: ['funding', 'grants'] });
+        });
       }
       router.back();
     } catch (e) {
-      const msg = e instanceof Error ? e.message : 'Failed to create listing';
+      const msg =
+        e instanceof AppError
+          ? e.userMessage
+          : e instanceof Error
+            ? e.message
+            : 'Failed to create listing';
       setErrorMsg(msg);
     } finally {
       setSubmitting(false);

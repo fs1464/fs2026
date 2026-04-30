@@ -1,9 +1,8 @@
 import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
-import { getGrant } from '@/services/funding';
-import { colors, fonts, spacing } from '@/constants/theme';
+import { useGrantDetail } from '@/hooks/queries/funding';
+import { colors, fonts, spacing } from '@/design/tokens';
 import { formatCurrency, formatDate } from '@/utils/format';
 import { Chip } from '@/components/funding/Chip';
 import { DetailHeader } from '@/components/funding/DetailHeader';
@@ -11,7 +10,7 @@ import { DetailSection } from '@/components/funding/DetailSection';
 
 export default function GrantDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const q = useQuery({ queryKey: ['grant', id], queryFn: () => getGrant(id as string), enabled: !!id });
+  const q = useGrantDetail(id);
 
   const onApply = () => {
     if (q.data?.application_link) Linking.openURL(q.data.application_link).catch(() => {});

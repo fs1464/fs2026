@@ -1,9 +1,8 @@
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
-import { getDeal } from '@/services/funding';
-import { colors, fonts, spacing } from '@/constants/theme';
+import { useDealDetail } from '@/hooks/queries/funding';
+import { colors, fonts, spacing } from '@/design/tokens';
 import { formatCurrency } from '@/utils/format';
 import { Chip } from '@/components/funding/Chip';
 import { DetailHeader } from '@/components/funding/DetailHeader';
@@ -19,7 +18,7 @@ const STAGE_LABELS: Record<string, string> = {
 
 export default function DealDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const q = useQuery({ queryKey: ['deal', id], queryFn: () => getDeal(id as string), enabled: !!id });
+  const q = useDealDetail(id);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
