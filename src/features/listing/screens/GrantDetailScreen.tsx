@@ -4,9 +4,9 @@ import { useLocalSearchParams } from 'expo-router';
 import { useGrantDetail } from '@/hooks/queries/funding';
 import { colors, fonts, spacing } from '@/design/tokens';
 import { formatCurrency, formatDate } from '@/utils/format';
-import { Chip } from '@/components/funding/Chip';
-import { DetailHeader } from '@/components/funding/DetailHeader';
-import { DetailSection } from '@/components/funding/DetailSection';
+import { Chip } from '@/components/features/funding/Chip';
+import { DetailHeader } from '@/components/features/funding/DetailHeader';
+import { DetailSection } from '@/components/features/funding/DetailSection';
 
 export default function GrantDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();

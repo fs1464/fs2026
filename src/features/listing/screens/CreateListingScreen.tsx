@@ -3,8 +3,8 @@ import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
 import { colors, fonts, spacing } from '@/design/tokens';
-import { Field } from '@/components/funding/Field';
-import { DetailHeader } from '@/components/funding/DetailHeader';
+import { Field } from '@/components/features/funding/Field';
+import { DetailHeader } from '@/components/features/funding/DetailHeader';
 import {
   useCreateCohort,
   useCreateDeal,
