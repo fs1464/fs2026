@@ -47,6 +47,7 @@ export default function RootLayout() {
         <Stack.Screen name="settings" options={{ presentation: 'card' }} />
         <Stack.Screen name="groups" options={{ presentation: 'card' }} />
         <Stack.Screen name="reels" options={{ presentation: 'card' }} />
+        <Stack.Screen name="messages" options={{ presentation: 'card' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="dark" />
