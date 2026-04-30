@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nearly - Comments Feed</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#075985",
+              "inverse-primary": "#fbbf24",
+              "surface-container-lowest": "#ffffff",
+              "error-dim": "#b92902",
+              "primary-dim": "#863800",
+              "surface-bright": "#ffffff",
+              "on-tertiary-fixed": "#082f49",
+              "on-background": "#0f172a",
+              "error": "#ef4444",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "on-secondary-container": "#1e293b",
+              "surface-container": "#f1f5f9",
+              "error-container": "#fee2e2",
+              "surface-tint": "#f97316",
+              "secondary-fixed": "#f1f5f9",
+              "tertiary-fixed": "#e0f2fe",
+              "tertiary-dim": "#694a00",
+              "surface-container-high": "#e2e8f0",
+              "on-primary-fixed": "#431407",
+              "inverse-on-surface": "#f8fafc",
+              "outline-variant": "#e2e8f0",
+              "inverse-surface": "#1e293b",
+              "secondary-dim": "#7c4000",
+              "surface-container-highest": "#cbd5e1",
+              "secondary-container": "#f1f5f9",
+              "on-surface": "#0f172a",
+              "tertiary": "#0ea5e9",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#7c2d12",
+              "surface": "#ffffff",
+              "primary-container": "#ffedd5",
+              "tertiary-fixed-dim": "#bae6fd",
+              "on-primary-fixed-variant": "#9a3412",
+              "tertiary-container": "#e0f2fe",
+              "primary-fixed": "#ffedd5",
+              "surface-container-low": "#f8fafc",
+              "primary": "#f97316",
+              "on-secondary-fixed-variant": "#334155",
+              "background": "#ffffff",
+              "on-surface-variant": "#475569",
+              "secondary-fixed-dim": "#e2e8f0",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-error-container": "#991b1b",
+              "surface-dim": "#f1f5f9",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#0f172a",
+              "surface-variant": "#f1f5f9",
+              "outline": "#94a3b8",
+              "primary-fixed-dim": "#fed7aa",
+              "secondary": "#475569"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .sora { font-family: 'Sora', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-900 text-on-surface antialiased overflow-hidden">
+<!-- Blurred Background Reel Content -->
+<div class="fixed inset-0 z-0">
+<img alt="Reel Content" class="w-full h-full object-cover blur-2xl opacity-40 scale-110" data-alt="vibrant urban local market at sunset with colorful fruit stalls and people in soft warm focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLFetjoX-dAf0XGKaBz8bqewl-Chuk6ZV9L2X0UMS_nMP0cPBpBhLddMfI9Jmj2FqpbaXq8qaui8hpqK7JsB8Sc6_NLSh-YswwzLJY9wwOfsJwTm_COonW7RFaYPhEZx4Z-OreaLDyZ89Jj8nvzVqRVJ-Xv-t1_j5f7iRE_YVEGz-fowUznfy6AU6FfNy1R3hMx0Oqi9SqF8p0zPhtpOl7uBXu6FOfdUaVj3otMLK0hzWy5O-W37O73_EmmDoqSyyhwV4-Zi8D1pY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
+</div>
+<!-- Bottom Sheet Container -->
+<div class="fixed inset-x-0 bottom-0 top-12 md:top-20 bg-white rounded-t-[32px] shadow-2xl z-10 flex flex-col overflow-hidden">
+<!-- Drag Handle -->
+<div class="flex justify-center pt-3 pb-1">
+<div class="w-10 h-1.5 bg-slate-200 rounded-full"></div>
+</div>
+<!-- Shared Component: TopAppBar -->
+<header class="flex items-center justify-between px-4 h-16 w-full fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm !relative !top-0">
+<div class="flex items-center gap-3">
+<button class="p-2 active:scale-95 transition-transform duration-200 hover:bg-slate-50 rounded-full">
+<span class="material-symbols-outlined text-slate-600" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-['Sora'] font-bold tracking-tight text-[18px] text-slate-900">Comments</h1>
+<span class="text-[12px] text-slate-500 font-medium">1,284 neighborhood replies</span>
+</div>
+</div>
+<button class="p-2 active:scale-95 transition-transform duration-200 hover:bg-slate-50 rounded-full">
+<span class="material-symbols-outlined text-slate-600" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<!-- Comments Content Canvas -->
+<div class="flex-1 overflow-y-auto px-4 py-4 space-y-6 pb-40">
+<!-- Comment Block 1 -->
+<div class="flex gap-3">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="portrait of a smiling middle-aged man with short hair and a warm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArgWv14Cd1aYIep6HpRf3IA8Y3ziaUBWib2F7juYJZjBo32pqpGaQjsgO82toIqftWFFoaMWCe0iZ4_hpcmJTUwF_dIY_aYNvHPzzfyxBeql-0dCIEvCDyjNSJBzE58kj_rgnEQdGuDA_J5SqEUrs9R9npc8pEMDTVarXeLY6BEN2pN1jlI3LfR0C_0Qlk8tnF7QCJYeyG4tH38KtV2ZnOG4N_5j547PLafqBjyjU8zxU8GqNmpz_nOHt_SSBxAWSK9MyuLeHBahQ"/>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="sora font-bold text-sm text-slate-900">Marcus Sterling</span>
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<button class="text-slate-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed">The new farmer's market on 5th street is exactly what this neighborhood needed. Those heirloom tomatoes looked amazing in your reel!</p>
+<div class="flex items-center gap-4 pt-1">
+<span class="text-[11px] text-slate-400 font-medium">4h ago</span>
+<button class="text-[11px] text-slate-900 font-bold tracking-wide active:opacity-60">Reply</button>
+</div>
+<!-- Nested Reply -->
+<div class="flex gap-3 mt-4 border-l-2 border-slate-100 pl-4">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="vibrant young woman with curly hair smiling brightly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLc6sKV3gnKaxwevzXPCIyFbhB062guSwwaVMPERd03syC71HcttKqhZKZOLgjc41CI_bbFgDxHcJUR85o64tgPyXpeX2N1AbfFwtsTKpB3gmTuQd3WqF4356AIGWT3TmXyuCl7uO9aiMi1SZaTm-90IupbZvCwd3p4rQKgvkdxiSwPSB0GlyoKmFl72F1xYzLNN9wYeKSq8xebZua8Cz6b4wH_uJ91rLokk67N-GQ3a7qa1syK4ZKd906u8jvvIQH-4YfvxGl22k"/>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="sora font-bold text-sm text-slate-900">Sarah Jenkins</span>
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<button class="text-slate-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed">Agreed, Marcus! I was there this morning. The honey stall is a must-visit too.</p>
+<div class="flex items-center gap-4 pt-1">
+<span class="text-[11px] text-slate-400 font-medium">2h ago</span>
+<button class="text-[11px] text-slate-900 font-bold tracking-wide active:opacity-60">Reply</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comment Block 2 -->
+<div class="flex gap-3">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="portrait of a young professional man with a clean beard and glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1WtIEHcIr59ulKai-OZXCGEx-Xceba835NANePAvvDPeBshBhY_7jwMaK1WU-atXKrXTvWIt1u2b7Yq1_yWTifV4OVQMo-Rx0QLXVELGvshhBmdj0RqqwmsD64TokkUUsaRNBs7BY_6Nf-dzAA8uCr-r3ICkyeOP5auHoJxxchBHs7sK_foEhaRlcHJxPthMdO2tNoNzw6v-ZPQpIUhcvxHvnEw74WY0wSRb7pB-hOQZgCaSW6pCFqThyz58Tr3hKVJx1ZjmDTKQ"/>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="sora font-bold text-sm text-slate-900">David Chen</span>
+</div>
+<button class="text-primary active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed">Does anyone know if they are pet friendly? I want to bring my golden retriever next weekend! 🐕</p>
+<div class="flex items-center gap-4 pt-1">
+<span class="text-[11px] text-slate-400 font-medium">6h ago</span>
+<button class="text-[11px] text-slate-900 font-bold tracking-wide active:opacity-60">Reply</button>
+</div>
+</div>
+</div>
+<!-- Comment Block 3 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="store">store</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="sora font-bold text-sm text-slate-900">Sunnyside Bakery</span>
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<button class="text-slate-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed">We'll be there every Sunday! Come say hi for a free sourdough sample if you mention this reel. ✨</p>
+<div class="flex items-center gap-4 pt-1">
+<span class="text-[11px] text-slate-400 font-medium">8h ago</span>
+<button class="text-[11px] text-slate-900 font-bold tracking-wide active:opacity-60">Reply</button>
+</div>
+</div>
+</div>
+<!-- Comment Block 4 (Simple) -->
+<div class="flex gap-3">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="side profile of a woman with braided hair looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMOIthXd_WDQ6IViXLUlC3MBz1GIpsxeiyqGLXzhxO-gw8RdCnFhQO5UyroHBYCvZBwWlGqiG0JsszC1xA6zdbY8tMiqZZn8XNMJMvJ7O-Ft7DVSsbrIfyYhDPiWEjh2Ab84jfaD5qPEuVLqXwE0Z8F0Oh_E6bvW4kgH7Dv7IRN1kXq5i49NU_uOjpp-DVPHtXEp2hR2lCFbwzJkjR8gJ6nd3_CxuRbsOIUhGoSaupu0YFrS9MqxOD2mjxFu6Qs1SFRY3a8q3iL60"/>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="sora font-bold text-sm text-slate-900">Elena Rossi</span>
+</div>
+<button class="text-slate-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed">Love the editing on this! Very cinematic.</p>
+<div class="flex items-center gap-4 pt-1">
+<span class="text-[11px] text-slate-400 font-medium">10h ago</span>
+<button class="text-[11px] text-slate-900 font-bold tracking-wide active:opacity-60">Reply</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Comment Input Area -->
+<div class="fixed bottom-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-100/50 px-4 pt-3 pb-8 z-20">
+<!-- Quick Reaction Emojis -->
+<div class="flex items-center justify-between px-2 mb-4">
+<button class="text-xl hover:scale-125 transition-transform duration-150">❤️</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">🙌</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">🔥</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">👏</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">😮</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">😍</button>
+<button class="text-xl hover:scale-125 transition-transform duration-150">📍</button>
+</div>
+<!-- Input Row -->
+<div class="flex items-center gap-3">
+<img alt="User Avatar" class="w-9 h-9 rounded-full object-cover border-2 border-primary/20 p-0.5" data-alt="portrait of a young woman with a friendly, natural look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlM_Bww-nW-jgAfenNorTESAZLn_W2q9nt4SzxTuq--Mkl-xdv2aXNkAF7oVLDoRlz7-sMLDT2InsKOQzAgrp4zyJoQT_Gew910AlhSSu-n-UMsOmwDNxKcQzbWPNdHEn2zaIJclYDVcU6lX3fxh4Er-_17v8IP8ha7ItL3rSAhqDTBcUig8C602w2QZoO4kaEAPxcG8yaN3DDApZkuaZHD6Sb3Uelulm50mmP68W38JFgYtKo2v34qzMkEsBMCz5oRmcA5xR9kOE"/>
+<div class="flex-1 relative flex items-center">
+<input class="w-full bg-slate-100/80 border-none rounded-full px-5 py-3 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500 font-medium" placeholder="Add a comment for Priya..." type="text"/>
+<button class="absolute right-2 bg-primary text-white font-bold text-xs px-4 py-2 rounded-full active:scale-95 transition-all shadow-lg shadow-primary/20">
+                        Send
+                    </button>
+</div>
+</div>
+</div>
+<!-- Shared Component: BottomNavBar -->
+<!-- Suppressed for Comment Sheet View per Task requirements (overlay state) -->
+</div>
+<!-- Hidden Sidebar for Desktop Layout Consistency -->
+<div class="hidden md:flex fixed left-0 top-0 h-full w-64 bg-slate-900 p-6 flex-col gap-8 z-30">
+<div class="sora font-black text-2xl text-primary tracking-tighter">Nearly.</div>
+<nav class="space-y-4">
+<div class="flex items-center gap-3 text-white/60 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="sora font-semibold">Home</span>
+</div>
+<div class="flex items-center gap-3 text-white/60 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="sora font-semibold">Discover</span>
+</div>
+<div class="flex items-center gap-3 text-white/60 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="sora font-semibold">Alerts</span>
+</div>
+<div class="flex items-center gap-3 text-primary bg-primary/10 p-3 rounded-xl cursor-pointer">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="sora font-semibold text-primary">Interactions</span>
+</div>
+</nav>
+</div>
+</body></html>

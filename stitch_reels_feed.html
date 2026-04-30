@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Nearly Reels - Urban Pulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#0f172a",
+              "surface": "#ffffff",
+              "surface-container-high": "#e2e8f0",
+              "tertiary-fixed-dim": "#bae6fd",
+              "secondary-dim": "#7c4000",
+              "on-error-container": "#991b1b",
+              "inverse-on-surface": "#f8fafc",
+              "inverse-surface": "#1e293b",
+              "tertiary": "#0ea5e9",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#9a3412",
+              "error": "#ef4444",
+              "on-primary": "#ffffff",
+              "primary-container": "#ffedd5",
+              "on-primary-container": "#7c2d12",
+              "primary-dim": "#863800",
+              "primary-fixed-dim": "#fed7aa",
+              "tertiary-container": "#e0f2fe",
+              "secondary-fixed-dim": "#e2e8f0",
+              "on-secondary-fixed": "#0f172a",
+              "on-secondary-container": "#1e293b",
+              "outline-variant": "#e2e8f0",
+              "secondary-fixed": "#f1f5f9",
+              "surface-container-highest": "#cbd5e1",
+              "on-error": "#ffffff",
+              "outline": "#94a3b8",
+              "secondary-container": "#f1f5f9",
+              "tertiary-fixed": "#e0f2fe",
+              "primary-fixed": "#ffedd5",
+              "surface-tint": "#f97316",
+              "primary": "#f97316",
+              "background": "#ffffff",
+              "on-secondary-fixed-variant": "#334155",
+              "surface-dim": "#f1f5f9",
+              "inverse-primary": "#fbbf24",
+              "error-container": "#fee2e2",
+              "on-primary-fixed": "#431407",
+              "surface-variant": "#f1f5f9",
+              "surface-bright": "#ffffff",
+              "on-surface": "#0f172a",
+              "error-dim": "#b92902",
+              "on-surface-variant": "#475569",
+              "secondary": "#475569",
+              "on-tertiary-fixed": "#082f49",
+              "on-tertiary-container": "#075985",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#f8fafc",
+              "on-secondary": "#ffffff",
+              "tertiary-dim": "#694a00",
+              "surface-container": "#f1f5f9",
+              "brand-orange": "#FF6B35"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrolling-text {
+            display: flex;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .scrolling-text span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        .video-container {
+            height: 100vh;
+        }
+        .glass-overlay {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-black font-body text-surface selection:bg-primary/30 antialiased overflow-hidden">
+<!-- Full Screen Reels Feed -->
+<main class="relative w-full h-screen bg-black">
+<!-- Video Placeholder -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Vibrant street food stall in Indore at night with steam rising from large pans of yellow poha and golden jalebis, bright warm lighting and busy urban atmosphere" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2PyC1KULVHGNkQuETgH_z1uuTGQo5ucv_95y__onLjrKo7T7zPITXI65BdgE6TRIx8dxh8UBqH2Q-BnfxSIZr5B8_Poyr2Srrgm4Md6owWc0AbtZC0BwpeeDh3yeFswxK2W_evRbamDUHFbcYqxAq5fvsww31d0yvRPBZPx8bbGi-tcocy9L4TLscpJvrJVpCrec2eRRJVjkkPGfdf3S0FrqFGv1I3B3MYb3Vy-Ue26KzDSW0oF_E3sqUEbMzucV8Vr8YAzuOpB4');">
+<!-- Dark Vignette Overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+</div>
+<!-- Vertical Interaction Bar (Right Side) -->
+<div class="absolute right-4 bottom-32 flex flex-col items-center gap-6 z-40">
+<!-- Profile -->
+<div class="relative mb-2">
+<div class="w-12 h-12 rounded-full border-2 border-white shadow-lg overflow-hidden">
+<img alt="Priya M" class="w-full h-full object-cover" data-alt="Headshot of a confident young woman with glasses and dark hair smiling warmly, vibrant colorful background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeDbXfbJUcTVdIhBqCjUzLSbDjrIMXN4x4H170IgIQXFkUkJbFIYq9ag9dnTFUFOzv5af7SjMyT4r4czZ75QyOELIoJO0hPj4EZxrrM5heDLzE7q-byZehtbiSeTPILDcPmf9iZEu4HO_mirD7t_t2y8pH_QllwnKWvLGQ64st7TRY0i47HBFJp1xg-TYMeT3ulC-yT9zA4UjSfgaMK1aMZtaWN8zC4-YjWeTxBIW2BSGIpBRJ_B0xZaDEhjpRO23aC8zY8yUxRaE"/>
+</div>
+</div>
+<!-- Like -->
+<div class="flex flex-col items-center gap-1">
+<button class="w-12 h-12 rounded-full glass-overlay flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<span class="text-[12px] font-bold text-white shadow-sm">1.2k</span>
+</div>
+<!-- Comment -->
+<div class="flex flex-col items-center gap-1">
+<button class="w-12 h-12 rounded-full glass-overlay flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">comment</span>
+</button>
+<span class="text-[12px] font-bold text-white shadow-sm">84</span>
+</div>
+<!-- Share -->
+<div class="flex flex-col items-center gap-1">
+<button class="w-12 h-12 rounded-full glass-overlay flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">send</span>
+</button>
+</div>
+<!-- More -->
+<button class="w-12 h-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl">more_vert</span>
+</button>
+</div>
+<!-- Content Overlay (Bottom Left) -->
+<div class="absolute bottom-28 left-4 right-20 z-40 space-y-3">
+<!-- Creator Info -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline font-bold text-lg text-white drop-shadow-md">Priya M.</h2>
+<span class="material-symbols-outlined text-blue-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<!-- Follow Button -->
+<button class="bg-[#FF6B35] text-white text-[11px] font-bold px-4 py-1.5 rounded-full shadow-lg active:scale-95 transition-transform">
+                Follow
+            </button>
+</div>
+<!-- Location & Rating -->
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 text-white/90">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="text-[12px] font-medium drop-shadow-sm">Sector 12 · 320m away</span>
+</div>
+<div class="bg-white/20 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 border border-white/10">
+<span class="material-symbols-outlined text-yellow-400 text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[11px] font-bold text-white">4.8</span>
+</div>
+</div>
+<!-- Caption -->
+<p class="text-white text-sm line-clamp-2 drop-shadow-md leading-relaxed">
+            Best poha-jalebi spot in Sector 12! 🍜 <span class="font-bold">#IndoreFoodie #NearlyLocal</span>
+</p>
+<!-- Audio Track Info -->
+<div class="flex items-center gap-2 bg-black/30 backdrop-blur-sm rounded-full py-1 px-3 w-fit border border-white/5">
+<span class="material-symbols-outlined text-white text-[16px]">music_note</span>
+<div class="overflow-hidden w-32">
+<div class="scrolling-text text-[11px] text-white/90 font-medium">
+<span>Original Audio - Indori Chaska - Priya M. • </span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md flex justify-around items-center px-2 pb-safe z-50 rounded-t-2xl shadow-2xl">
+<!-- Feed Tab -->
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:text-orange-500 transition-colors tap-highlight-none active:scale-90">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium mt-1">Feed</span>
+</button>
+<!-- News Tab -->
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:text-orange-500 transition-colors tap-highlight-none active:scale-90">
+<span class="material-symbols-outlined text-[24px]">newspaper</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium mt-1">News</span>
+</button>
+<!-- Reels Tab (Active) -->
+<button class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-500 font-bold scale-110 transition-all tap-highlight-none">
+<div class="relative">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">movie</span>
+<div class="absolute -top-1 -right-1 w-1.5 h-1.5 bg-orange-600 rounded-full"></div>
+</div>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold mt-1">Reels</span>
+</button>
+<!-- Charcha Tab -->
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:text-orange-500 transition-colors tap-highlight-none active:scale-90">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium mt-1">Charcha</span>
+</button>
+<!-- Market Tab -->
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:text-orange-500 transition-colors tap-highlight-none active:scale-90">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium mt-1">Market</span>
+</button>
+</nav>
+<!-- Floating Action Button (Contextual for Creating Content) -->
+<button class="fixed bottom-24 right-4 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_8px_20px_-4px_rgba(249,115,22,0.4)] z-50 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

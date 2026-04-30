@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nearly Group Chat - Play badminton</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "primary-fixed": "#ffedd5",
+              "inverse-surface": "#1e293b",
+              "inverse-primary": "#fbbf24",
+              "on-tertiary-fixed": "#082f49",
+              "on-surface-variant": "#475569",
+              "on-surface": "#0f172a",
+              "outline-variant": "#e2e8f0",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#e2e8f0",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "on-background": "#0f172a",
+              "tertiary-fixed": "#e0f2fe",
+              "primary-fixed-dim": "#fed7aa",
+              "surface-container-low": "#f8fafc",
+              "on-primary-fixed-variant": "#9a3412",
+              "tertiary-dim": "#694a00",
+              "tertiary": "#0ea5e9",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#334155",
+              "tertiary-fixed-dim": "#bae6fd",
+              "primary-container": "#ffedd5",
+              "surface-tint": "#f97316",
+              "surface-dim": "#f1f5f9",
+              "primary-dim": "#863800",
+              "on-primary-container": "#7c2d12",
+              "secondary-fixed": "#f1f5f9",
+              "surface-variant": "#f1f5f9",
+              "outline": "#94a3b8",
+              "inverse-on-surface": "#f8fafc",
+              "background": "#ffffff",
+              "surface": "#ffffff",
+              "secondary-container": "#f1f5f9",
+              "primary": "#f97316",
+              "on-secondary-container": "#1e293b",
+              "error-dim": "#b92902",
+              "on-error-container": "#991b1b",
+              "on-secondary": "#ffffff",
+              "secondary": "#475569",
+              "on-tertiary-container": "#075985",
+              "error-container": "#fee2e2",
+              "secondary-dim": "#7c4000",
+              "surface-container": "#f1f5f9",
+              "surface-container-highest": "#cbd5e1",
+              "surface-container-high": "#e2e8f0",
+              "on-primary-fixed": "#431407",
+              "on-secondary-fixed": "#0f172a",
+              "error": "#ef4444",
+              "tertiary-container": "#e0f2fe",
+              "surface-bright": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Sora", "Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .chat-bubble-left {
+        border-radius: 0px 18px 18px 18px;
+      }
+      .chat-bubble-right {
+        border-radius: 18px 18px 0px 18px;
+      }
+      .glass-blur {
+        backdrop-filter: blur(12px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased min-h-screen flex flex-col">
+<!-- Top Navigation Anchor (Shared Component Mapping) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-4 h-16 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-3">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-900" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline font-bold tracking-tight text-[18px] text-on-surface">Sector 12 Cricket Toli</h1>
+<span class="text-[12px] font-medium text-slate-500 font-body">41 participants</span>
+</div>
+</div><button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200 ml-auto mr-1">
+<span class="material-symbols-outlined text-primary" data-icon="update" style="color: #f97316;">update</span>
+</button>
+<div class="flex items-center"><button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600" data-icon="more_vert">more_vert</span>
+</button></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 pt-16 pb-24 overflow-y-auto">
+<!-- RSVP Banner -->
+<div class="px-4 py-3">
+<button class="w-full bg-primary-container text-on-primary-container py-3 px-4 rounded-xl flex items-center justify-between font-headline font-semibold text-[14px] shadow-sm active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-2">
+<span class="text-xl">✋</span>
+<span>Confirm Participation</span>
+</div>
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Chat Timeline -->
+<div class="px-4 mt-4 space-y-6">
+<!-- Message Block: Hritik Bakshi -->
+<div class="flex items-start gap-3 group">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-orange-100 border-2 border-white shadow-sm">
+<img alt="Hritik Bakshi" class="w-full h-full object-cover" data-alt="portrait of a young south asian man with a friendly expression in outdoor natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3GmUjvgISUIQYmxpSTDX57mU6TiNWOq_phaO0IR_SvCz6MwbcbkaODHW9MZ8kdn0uCSfN9R2aN5ZaAof6Ayy-5eU-jsdrgWZbRf6evQfAs51BcSgbV48NHMmOaSHRwre1MRbRiUg-BEv8u85OznNocvmzd9Rcl5s-b6Sjo3b0Awkz6NtSWBzULuQ4IkYmanD4zimBMuQFJkwhv1aGr__u69oQXBoXzSrKKz8qJ4XeLeAhzPGDN0Qsmts8IqGWsIPXoRsKraEQejw"/>
+</div>
+<div class="flex flex-col max-w-[80%]">
+<span class="text-[12px] font-semibold text-slate-500 ml-1 mb-1 font-label">Hritik Bakshi</span>
+<div class="bg-surface-container-low text-on-surface chat-bubble-left px-4 py-3 shadow-sm">
+<p class="text-[14px] leading-relaxed">Anyone wants to play badminton tomorrow morning at 7 AM? I've booked a court nearby.</p>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 ml-1">10:42 AM</span>
+</div>
+</div>
+<!-- Message Block: Devansh -->
+<div class="flex items-start gap-3 group">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-orange-100 border-2 border-white shadow-sm">
+<img alt="Devansh" class="w-full h-full object-cover" data-alt="close-up of a smiling man with trendy short hair and a stylish shirt in a modern urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-AFASw11Di2rLiDyzGCyC4PwLOB18KGEZIEk2z-eksUFjBvhwAH22e-Mx8S_5VY3mEsolrRtjoRGxWo3RuAtEHH9URDbZ4juJPsNZSgjPBcymp57zNnutJHodeIhQDsgN5FqwSyDs8YN3wImDXWBHIIHt_vhjjaaO8kdgdY_b3pbI1ZbwezHMarP-t9Suev4DXdd0vofRyvn04dLSTkQ_gdRhoDTLGeWzpm69KtaB71S6i2hMjzEQMN_Bgn9_nz6EhhIOoJfxKc8"/>
+</div>
+<div class="flex flex-col max-w-[80%]">
+<span class="text-[12px] font-semibold text-slate-500 ml-1 mb-1 font-label">Devansh</span>
+<div class="bg-surface-container-low text-on-surface chat-bubble-left px-4 py-3 shadow-sm">
+<p class="text-[14px] leading-relaxed">anyone for badminton today around 6 PM?</p>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 ml-1">12:15 PM</span>
+</div>
+</div>
+<!-- Message Block: Pratham (Replying) -->
+<div class="flex items-start gap-3 group">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-orange-100 border-2 border-white shadow-sm">
+<img alt="Pratham" class="w-full h-full object-cover" data-alt="young man looking confidently at camera with modern hairstyle in a bright sunlit environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBexPHsd9ykORJU0haMYfVbAf-jW29BYayderx1L0BYgw9KuabT5nXKFCXUeOj-ptUM_nrZtlCCMCliDh7X2wYTB6-YOQCPMcTGwUGUeVN426wks_vvUpSudL95JAiO9Pw4jKX4UJQxvFDTJGgpcShSVBRtYEHukLBFle9ZRCw-De5tuba6zIELBbqHsWee-WA3JpCIUJY2mCGQHc20r4ngFRFAVPzB5vtY_gcwQTd2VdywHHn6lFPg3_yzINW-OQmeZ2xiF9L_Ws"/>
+</div>
+<div class="flex flex-col max-w-[80%]">
+<span class="text-[12px] font-semibold text-slate-500 ml-1 mb-1 font-label">Pratham</span>
+<div class="bg-surface-container-low text-on-surface chat-bubble-left shadow-sm overflow-hidden">
+<!-- Reply Context -->
+<div class="bg-slate-100/50 border-l-4 border-primary px-3 py-2 m-1 rounded-lg">
+<span class="text-[11px] font-bold text-primary block">Devansh</span>
+<p class="text-[12px] text-slate-500 truncate">anyone for badminton today around 6 PM?</p>
+</div>
+<div class="px-4 py-3 pt-1">
+<p class="text-[14px] leading-relaxed">I'm in! Which location?</p>
+</div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 ml-1">12:18 PM</span>
+</div>
+</div>
+<!-- Consecutive Message: Devansh -->
+<div class="flex flex-col items-end w-full">
+<div class="flex items-start gap-3 justify-end w-full">
+<div class="flex flex-col max-w-[80%] items-end">
+<div class="bg-primary text-on-primary chat-bubble-right px-4 py-3 shadow-md shadow-primary/20">
+<p class="text-[14px] leading-relaxed">ArenaZ preferably</p>
+</div>
+<div class="bg-primary text-on-primary chat-bubble-right px-4 py-3 shadow-md shadow-primary/20 mt-1">
+<p class="text-[14px] leading-relaxed">JNS sports academy</p>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 mr-1">12:20 PM</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-orange-100 border-2 border-white shadow-sm">
+<img alt="Devansh" class="w-full h-full object-cover" data-alt="close-up of a smiling man with trendy short hair and a stylish shirt in a modern urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzxMMR6vCQX3Zht1vSe8AGpOwYE7vuYqf0qCkdYNdjYEBd0jtA2aZeAsj62I-yEp8bpJjuyWxw38o0kHHYP-Lh-3qZLg_XsE_hlJmNmgaNSsDIe7LYQFlkN9xHH79jZXVHnHffCIxXbjr_8Y-1N1dHQBu3KyG7FrUzYsNLrHq3mtGZyg4-58-Hxl2pdcDQ0CmObycX8SyU0cltNLlyeUaPCZfAjiXKRx6rnBNr3IzT1SOf7v_FbGTjob30Uxk600Lp41f1kMHggdQ"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Input Field -->
+<footer class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-xl px-4 py-4 z-50">
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-low hover:bg-slate-200 transition-colors h-12 w-12 flex items-center justify-center rounded-full flex-shrink-0 active:scale-95">
+<span class="material-symbols-outlined text-slate-600" data-icon="add">add</span>
+</button>
+<div class="flex-1 relative flex items-center">
+<input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary h-12 px-5 pr-12 rounded-full font-body text-[14px] text-on-surface placeholder-slate-400" placeholder="Type a message..." type="text"/>
+<button class="absolute right-1 w-10 h-10 bg-primary hover:bg-primary-dim transition-all text-white rounded-full flex items-center justify-center active:scale-90 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-[20px]" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- Bottom Nav Indicator (Safe area simulation) -->
+<div class="w-full flex justify-center mt-3 opacity-20">
+<div class="w-32 h-1 bg-slate-900 rounded-full"></div>
+</div>
+</footer>
+</body></html>

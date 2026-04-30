@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fff8f6;
+            color: #2D1A18;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .pricing-radio:checked + label {
+            background-color: #FF6B35;
+            color: white;
+            border-color: #FF6B35;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF6B35",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#FF6B35",
+                        "on-primary-container": "#ffffff",
+                        "secondary": "#5C5C5C",
+                        "on-surface": "#2D1A18",
+                        "on-surface-variant": "#63514F",
+                        "surface-container": "#FDEEE9",
+                        "surface-container-low": "#FEF4F1",
+                        "surface-container-highest": "#F9DDD4",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#D1C2BF",
+                        "outline-variant": "#EBE0DD",
+                        "tertiary": "#6B5EDF",
+                        "tertiary-container": "#E9E7FF",
+                        "on-tertiary-container": "#2A217A"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "sora": ["Sora"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-40">
+<!-- Top AppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-100">
+<div class="flex items-center justify-between px-6 py-4 max-w-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-sora font-bold text-on-surface text-lg">Recreate Activity</h1>
+<p class="text-xs font-medium text-on-surface-variant">Sector 12 Cricket Toli</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:bg-slate-100 transition-colors text-primary">
+<span class="material-symbols-outlined">history</span>
+</button>
+</div>
+</header>
+<main class="mt-24 px-6 max-w-2xl mx-auto">
+<!-- Hero Summary Card -->
+<section class="bg-surface-container rounded-3xl p-6 mb-8 relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="space-y-1">
+<span class="bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">Template Loaded</span>
+<h2 class="text-2xl font-headline font-extrabold text-on-surface leading-tight mt-2">Morning Cricket Match</h2>
+<p class="text-on-surface-variant flex items-center gap-1.5 text-sm font-medium">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                        Sector 12 Ground
+                    </p>
+</div>
+<div class="bg-primary p-3.5 rounded-2xl shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl">sports_cricket</span>
+</div>
+</div>
+<!-- Subtle Image Backdrop -->
+<div class="absolute -right-10 -bottom-10 opacity-[0.05] pointer-events-none">
+<span class="material-symbols-outlined text-[140px]">sports_cricket</span>
+</div>
+</section>
+<!-- Configuration -->
+<div class="space-y-10">
+<!-- Date Selection -->
+<section>
+<div class="flex justify-between items-center mb-4 px-1">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Select Date</h3>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="bg-primary text-white p-4 rounded-2xl flex flex-col items-center gap-1.5 transition-all shadow-lg shadow-primary/20">
+<span class="text-[10px] font-bold uppercase opacity-90">Today</span>
+<span class="text-lg font-sora font-bold">24 Oct</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface p-4 rounded-2xl flex flex-col items-center gap-1.5 hover:bg-outline-variant/30 transition-colors border border-outline/10">
+<span class="text-[10px] font-bold uppercase opacity-60">Tomorrow</span>
+<span class="text-lg font-sora font-bold">25 Oct</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface p-4 rounded-2xl flex flex-col items-center justify-center gap-1 hover:bg-outline-variant/30 transition-colors border border-outline/10">
+<span class="material-symbols-outlined text-primary text-xl">calendar_today</span>
+<span class="text-[10px] font-bold uppercase opacity-80">Custom</span>
+</button>
+</div>
+</section>
+<!-- Time & Duration -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-3xl border border-outline-variant/30">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Start Time</h3>
+<div class="flex items-center gap-3">
+<div class="bg-white p-2.5 rounded-xl text-primary shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<span class="text-xl font-sora font-bold block text-on-surface">07:00</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">AM</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-3xl border border-outline-variant/30">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Duration</h3>
+<div class="flex items-center gap-3">
+<div class="bg-white p-2.5 rounded-xl text-tertiary shadow-sm">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<div>
+<span class="text-xl font-sora font-bold block text-on-surface">2.5</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">HOURS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Options (New Section) -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 px-1">Pricing Model</h3>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<input checked="" class="hidden pricing-radio" id="price-free" name="pricing" type="radio"/>
+<label class="flex items-center justify-center gap-2 p-4 bg-surface-container-lowest border-2 border-outline-variant rounded-2xl cursor-pointer transition-all font-bold text-sm" for="price-free">
+<span class="material-symbols-outlined text-lg">celebration</span>
+                            Free
+                        </label>
+</div>
+<div>
+<input class="hidden pricing-radio" id="price-sponsored" name="pricing" type="radio"/>
+<label class="flex items-center justify-center gap-2 p-4 bg-surface-container-lowest border-2 border-outline-variant rounded-2xl cursor-pointer transition-all font-bold text-sm" for="price-sponsored">
+<span class="material-symbols-outlined text-lg">volunteer_activism</span>
+                            Sponsored
+                        </label>
+</div>
+<div class="col-span-2">
+<input class="hidden pricing-radio" id="price-paid" name="pricing" type="radio"/>
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest border-2 border-outline-variant rounded-2xl cursor-pointer transition-all font-bold text-sm" for="price-paid">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">payments</span>
+                                Paid (Per Person)
+                            </div>
+<div class="flex items-center gap-1 bg-white/20 px-3 py-1 rounded-lg">
+<span class="text-xs opacity-70">₹</span>
+<input class="bg-transparent border-none p-0 w-12 text-right focus:ring-0 font-bold placeholder:text-current" onclick="event.stopPropagation()" placeholder="0" type="number"/>
+</div>
+</label>
+</div>
+<div class="col-span-2">
+<input class="hidden pricing-radio" id="price-self" name="pricing" type="radio"/>
+<label class="flex items-center justify-center gap-2 p-4 bg-surface-container-lowest border-2 border-outline-variant rounded-2xl cursor-pointer transition-all font-bold text-sm" for="price-self">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+                            Pay for Everyone (Self)
+                        </label>
+</div>
+</div>
+</section>
+<!-- Fixed Details -->
+<section class="bg-white rounded-3xl p-6 border border-outline-variant/40 shadow-sm">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-6">Fixed Parameters</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-xl">map</span>
+</div>
+<div class="flex-1">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant opacity-60">Location</p>
+<p class="font-bold text-on-surface">Sector 12 Ground, Near Water Tank</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 scale-75">lock</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-xl">groups</span>
+</div>
+<div class="flex-1">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant opacity-60">Visibility</p>
+<p class="font-bold text-on-surface">Public (Sector 12 Circle)</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 scale-75">lock</span>
+</div>
+</div>
+</section>
+<!-- Map View -->
+<section class="rounded-3xl h-36 w-full overflow-hidden relative group border border-outline-variant/30">
+<img alt="Map view of Sector 12 area" class="w-full h-full object-cover filter saturate-[0.8] contrast-[0.9]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfMJn4SfV0M0nltzsHhsbYsY8kRmqMKhmibNCugFoSGIQNOLEEou_myjrV3aebEfNJYB5i8AU76Pq7acHPrMLyjvpc42DlrqlDmCU5LQpGAaPe7ICA582SD7JrxvBI4EvCYeFxguLd0wmSL_MbHYAD--_fjpy9RTB92tSgljx_mGzwvgtdvoIRHZ1h1v3DbftVv70QXhNNgzm12wldVkD-dJaRs3jhv1qHvKD5ZuoIGZpG_uB7B4joiG8iLrqP1dn3fabgV9klIEQ"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-sm border border-slate-100">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-tight text-on-surface">Sector 12 Ground</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full glass-panel pt-4 pb-10 px-6 z-50 border-t border-slate-100">
+<div class="max-w-2xl mx-auto">
+<button class="w-full bg-primary text-white py-5 rounded-2xl font-headline font-extrabold text-lg flex items-center justify-center gap-3 shadow-[0_12px_24px_-8px_rgba(255,107,53,0.4)] hover:brightness-105 active:scale-[0.98] transition-all">
+                Confirm &amp; Post
+                <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-[10px] font-bold text-on-surface-variant mt-4 uppercase tracking-[0.1em] opacity-60">Members will be notified instantly</p>
+</div>
+</div>
+</body></html>

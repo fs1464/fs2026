@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Groups | Nearly</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#1e293b",
+              "on-secondary-container": "#1e293b",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#f1f5f9",
+              "secondary-fixed-dim": "#e2e8f0",
+              "on-tertiary": "#ffffff",
+              "primary-dim": "#863800",
+              "on-primary-fixed": "#431407",
+              "tertiary-container": "#e0f2fe",
+              "on-secondary-fixed-variant": "#334155",
+              "error-container": "#fee2e2",
+              "outline-variant": "#e2e8f0",
+              "tertiary-fixed-dim": "#bae6fd",
+              "error": "#ef4444",
+              "primary-fixed": "#ffedd5",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "outline": "#94a3b8",
+              "tertiary-dim": "#694a00",
+              "on-tertiary-container": "#075985",
+              "primary-fixed-dim": "#fed7aa",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#475569",
+              "secondary-fixed": "#f1f5f9",
+              "surface-bright": "#ffffff",
+              "on-surface": "#0f172a",
+              "inverse-on-surface": "#f8fafc",
+              "on-tertiary-fixed": "#082f49",
+              "primary-container": "#ffedd5",
+              "error-dim": "#b92902",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e2e8f0",
+              "on-error-container": "#991b1b",
+              "inverse-primary": "#fbbf24",
+              "surface-tint": "#f97316",
+              "secondary-dim": "#7c4000",
+              "primary": "#f97316",
+              "surface-container": "#f1f5f9",
+              "background": "#ffffff",
+              "surface-container-low": "#f8fafc",
+              "surface": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#0f172a",
+              "on-background": "#0f172a",
+              "surface-variant": "#f1f5f9",
+              "on-primary-container": "#7c2d12",
+              "tertiary": "#0ea5e9",
+              "tertiary-fixed": "#e0f2fe",
+              "secondary": "#475569",
+              "surface-container-highest": "#cbd5e1",
+              "on-primary-fixed-variant": "#9a3412",
+              "secondary-container": "#f1f5f9"
+            },
+            fontFamily: {
+              "headline": ["Sora", "sans-serif"],
+              "body": ["Be Vietnam Pro", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .tonal-gap-8px { margin-bottom: 8px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar Shell (Fixed) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none after:content-[''] after:block after:h-[4px] after:bg-slate-100 dark:after:bg-slate-800">
+<div class="flex items-center px-4 h-16 w-full max-w-2xl mx-auto">
+<button class="mr-4 active:scale-95 transition-transform duration-200 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-[18px] tracking-tight text-orange-600 dark:text-orange-500">Discover Groups</h1>
+<div class="ml-auto flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</span>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-24 max-w-2xl mx-auto px-4">
+<!-- Search Section -->
+<section class="mb-6">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full h-12 pl-12 pr-12 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline font-body" placeholder="Search groups..." type="text"/>
+<div class="absolute inset-y-0 right-4 flex items-center">
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="mb-8 overflow-x-auto no-scrollbar -mx-4 px-4 flex gap-2">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label text-sm font-semibold whitespace-nowrap shadow-md shadow-primary/20">All</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-sm font-medium whitespace-nowrap hover:bg-surface-container-high transition-colors">Food &amp; Drinks</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-sm font-medium whitespace-nowrap hover:bg-surface-container-high transition-colors">Sports</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-sm font-medium whitespace-nowrap hover:bg-surface-container-high transition-colors">Technology</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-sm font-medium whitespace-nowrap hover:bg-surface-container-high transition-colors">Hobbies</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label text-sm font-medium whitespace-nowrap hover:bg-surface-container-high transition-colors">Wellness</button>
+</section>
+<!-- Content Feed: High-Fidelity Cards -->
+<div class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-surface border border-outline-variant/30 rounded-xl p-4 flex items-center gap-4 hover:shadow-sm transition-all group">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/10">
+<img alt="Group Icon" class="w-full h-full object-cover" data-alt="Close up shot of vibrant street food dishes with steam rising, warm golden lighting, high-end food photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWsdeDxR3laxNyYxUUl4kdlJE4AydqOnZGokasYRHU59W0XHoPZZMVU-FlKYJq7DW3kn9qqkKIbmi_NxPltWr54IllnUFp4DKORko_uzymRJqtjXdoSgQhWoUrlQYv9ZN1EyeAoio7f75b_qW1Qa6i3jaRtwY2OJVfYJCz9qzfdNDU-GIslnJP7GCsul9hKXcNL5AL5c8-pSIOrtt9HQok6iHBUzJPc6JtiESVqWAto-6gmR5MQmyNGDxgrNaMj_YJPIKOE9XWm3o"/>
+</div>
+<div class="flex-grow min-w-0">
+<h3 class="font-headline font-bold text-on-surface truncate">Indore Foodies</h3>
+<p class="font-body text-xs text-on-surface-variant mt-0.5">1.2k members · 400m away</p>
+</div>
+<button class="bg-primary text-on-primary font-label text-sm font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform shadow-lg shadow-primary/10">Join</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-outline-variant/30 rounded-xl p-4 flex items-center gap-4 hover:shadow-sm transition-all group">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/10">
+<img alt="Group Icon" class="w-full h-full object-cover" data-alt="Atmospheric shot of a cricket stadium field at dusk under bright stadium lights, cinematic lighting and professional sports feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUXs4atROfWB0pLPcLFe2KPNb5eX_SnTcOj7nzLI-TLO3zRo4rDd8WCF0vxaKaBgk1WygMM5tCTri1178loq5PKS8ybbKiwpV_xg7b2LUNQUhFe8Nmfsdw0MCMouDsfN53rQudQmAd99VbGLXBPKp-G2wJnP_yFibfeI-lhlvqPwQmDJfMBJyXTjAjukI-S_RFCITULbVuIoBFs3jEMLFrzbmebdoTTqROVhZWFC74hjqUYFYzZstTjRGRrBkaMvv5yJkjnBXNhiY"/>
+</div>
+<div class="flex-grow min-w-0">
+<h3 class="font-headline font-bold text-on-surface truncate">Sector 12 Cricket Club</h3>
+<p class="font-body text-xs text-on-surface-variant mt-0.5">850 members · 1.2km away</p>
+</div>
+<button class="bg-primary text-on-primary font-label text-sm font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform shadow-lg shadow-primary/10">Join</button>
+</div>
+<!-- Card 3 (Bento-style featured variant) -->
+<div class="bg-surface-container-low border border-primary/5 rounded-2xl p-5 flex flex-col gap-4 relative overflow-hidden group shadow-sm">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+<div class="flex items-center gap-4 z-10">
+<div class="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-4 ring-white shadow-md">
+<img alt="Group Icon" class="w-full h-full object-cover" data-alt="Modern desktop setup with mechanical keyboard and soft neon blue lighting, clean technology aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQyHPutGZlilCUz8ZRR8ShNyJvOKMIGMbvNa8x9fEfItSp7pzri0G1zBGZ_NCDtq8R8Xtwp5IjNrKT8RRk5hgGQ5_QqCguQoezzu7rsOT6_6UWkOXW6JlzyolnLyXAGVw0aLHUWe71-uJw4JCnza30KtIcVuTDxNtoK1Fc5iea-1dpQDXBTYRubIs1El5HE_cduzp0UpeYiIw3st2ztJgKsB24EocejDCrfc42sfapoi5gR5kgEiN7nZv_ICRw_MZCTiinTltdhY"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline font-bold text-lg text-on-surface">Tech Creators Hub</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">TRENDING</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant">3.4k members · 800m away</p>
+</div>
+</div>
+<div class="flex gap-2 z-10">
+<button class="flex-grow bg-primary text-on-primary font-label text-sm font-bold py-2.5 rounded-xl active:scale-95 transition-transform">Join Community</button>
+<button class="w-11 flex items-center justify-center bg-white border border-outline-variant rounded-xl text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface border border-outline-variant/30 rounded-xl p-4 flex items-center gap-4 hover:shadow-sm transition-all group">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/10">
+<img alt="Group Icon" class="w-full h-full object-cover" data-alt="Peaceful yoga studio interior with soft natural light filtering through sheer curtains, minimalist wellness aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlRRn1JsPsqioZzrPs8fAh38UIPmAEJ-m0r3NKun_YwvT3w9CJ9stj96BVoKETKYLZJXZtQmExsl9eXnvCYPK6H1d_Vg0kFTaf8sHJsDWqIPT0lqIZwHxH3JvSkjNZxhW80rCJwS66-adhEk6Nk1LQuSq6eBwgcDKs_dBqqRVxYxbmLqIbPZnUnUOGsQ74bOtOs2nq4gH8Uh3YyOWJAsdfMEzm0qVhuE488d0Z50ymHTzzGJzj7eRPaCadFiMELALxl2o3Yz7QP7c"/>
+</div>
+<div class="flex-grow min-w-0">
+<h3 class="font-headline font-bold text-on-surface truncate">Zen Morning Yoga</h3>
+<p class="font-body text-xs text-on-surface-variant mt-0.5">2.1k members · 3km away</p>
+</div>
+<button class="bg-primary text-on-primary font-label text-sm font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform shadow-lg shadow-primary/10">Join</button>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface border border-outline-variant/30 rounded-xl p-4 flex items-center gap-4 hover:shadow-sm transition-all group">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/10">
+<img alt="Group Icon" class="w-full h-full object-cover" data-alt="Blurred business meeting in a modern glass-walled office, bright daylight, professional corporate mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAio2raDXQ1mf40oSR92FdH4D54X5F7xS85DMD5pkBaLjt8vfqLsFhun6FKClBVFzUFnvPADnL-UMS0E69IiL8wBOEVSyjR3i1O18SKP-TNgZmt-FZFsmzjRd1TYViR0tgwUC_AZr7_NZB3BdY9ddkVOfQFjoUytQwoDDTTbzHVp1WkhVv9ryGbTa5QX2pGNnH2-t6_-E6OZvbcKpDyxD0FuIvEGno25RytZQnaB7hVDUFIT-UvC7uizbtkoUvS3oLF1Qttdkex640"/>
+</div>
+<div class="flex-grow min-w-0">
+<h3 class="font-headline font-bold text-on-surface truncate">Digital Marketing Pro</h3>
+<p class="font-body text-xs text-on-surface-variant mt-0.5">5.6k members · Nearby</p>
+</div>
+<button class="bg-primary text-on-primary font-label text-sm font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform shadow-lg shadow-primary/10">Join</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-white/5">
+<div class="flex justify-around items-center w-full px-4 pb-safe h-16 max-w-2xl mx-auto">
+<!-- Feed (Active) -->
+<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-500 font-bold active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-body text-[10px] mt-1">Feed</span>
+</a>
+<!-- News -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+<span class="font-body text-[10px] mt-1">News</span>
+</a>
+<!-- Reels -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="movie_filter">movie_filter</span>
+<span class="font-body text-[10px] mt-1">Reels</span>
+</a>
+<!-- Charcha -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-body text-[10px] mt-1">Charcha</span>
+</a>
+<!-- Market -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-body text-[10px] mt-1">Market</span>
+</a>
+</div>
+</nav>
+</body></html>

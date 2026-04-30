@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saffron Horizon - Create Group</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#f1f5f9",
+              "on-background": "#0f172a",
+              "tertiary-dim": "#694a00",
+              "surface-container-high": "#e2e8f0",
+              "error-container": "#fee2e2",
+              "secondary": "#475569",
+              "on-primary-fixed": "#431407",
+              "secondary-fixed-dim": "#e2e8f0",
+              "tertiary": "#0ea5e9",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#fbbf24",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#075985",
+              "on-surface-variant": "#475569",
+              "inverse-on-surface": "#f8fafc",
+              "on-primary-container": "#7c2d12",
+              "primary": "#f97316",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#991b1b",
+              "primary-container": "#ffedd5",
+              "surface-tint": "#f97316",
+              "on-secondary-fixed-variant": "#334155",
+              "secondary-fixed": "#f1f5f9",
+              "surface-container": "#f1f5f9",
+              "secondary-dim": "#7c4000",
+              "surface-dim": "#f1f5f9",
+              "error": "#ef4444",
+              "outline": "#94a3b8",
+              "on-tertiary-fixed": "#082f49",
+              "on-surface": "#0f172a",
+              "surface-bright": "#ffffff",
+              "background": "#ffffff",
+              "surface": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#e2e8f0",
+              "on-secondary-fixed": "#0f172a",
+              "inverse-surface": "#1e293b",
+              "primary-fixed-dim": "#fed7aa",
+              "error-dim": "#b92902",
+              "on-secondary-container": "#1e293b",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "surface-container-low": "#f8fafc",
+              "surface-container-highest": "#cbd5e1",
+              "secondary-container": "#f1f5f9",
+              "on-primary-fixed-variant": "#9a3412",
+              "primary-dim": "#863800",
+              "primary-fixed": "#ffedd5",
+              "tertiary-fixed-dim": "#bae6fd",
+              "tertiary-fixed": "#e0f2fe",
+              "on-error": "#ffffff",
+              "tertiary-container": "#e0f2fe"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #ffffff;
+        }
+        .sora { font-family: 'Sora', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar (from JSON) -->
+<header class="fixed top-0 w-full flex items-center px-4 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none z-50">
+<div class="flex items-center w-full max-w-screen-xl mx-auto">
+<button class="p-2 mr-2 text-orange-600 dark:text-orange-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Sora'] font-bold tracking-tight text-[18px] text-on-surface">Create Group</h1>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-32 px-4 max-w-lg mx-auto">
+<div class="space-y-10">
+<!-- Step Indicator -->
+<div class="flex items-center justify-between px-2">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Step 1 of 3</span>
+<h2 class="text-2xl font-bold sora tracking-tight text-on-surface">Basic Info</h2>
+</div>
+<div class="flex gap-1.5">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-4 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 w-4 rounded-full bg-surface-container-high"></div>
+</div>
+</div>
+<!-- Logo Upload Section -->
+<div class="flex flex-col items-center justify-center space-y-4">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full bg-primary-container flex items-center justify-center border-4 border-white shadow-md relative overflow-hidden">
+<img alt="Logo Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" data-alt="abstract geometric pattern with soft saffron orange and white shapes representing community and connection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGQhtbVbtK_gEytwCm519YJcmBspAZl3_gPD9X--F8-EfPxm1dYNWZQavY1eWv44nP-ubZjUX-WPBuppSh6GLlKlixlWPbPG4uYYRE1QbA0HfXJHKpRkEGq5nzg1aLvE6j8CQpUeRb2TuEkhdzfB8gtM4BwhFua99e3oeENfA3VpEuAZcxVjhdpxsuO4LwGfsaVJizV1-DFpPMfqaOgAvhl4PFCfCUs5vvDwSMHuljVdjsDQ8TLv0EcEY7U9zNbrB9dVxwbZoYJSg"/>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="photo_camera">photo_camera</span>
+</div>
+<button class="absolute bottom-0 right-0 p-2 bg-primary text-white rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<p class="text-xs font-medium text-secondary">Upload Group Logo</p>
+</div>
+<!-- Form Section -->
+<div class="space-y-6">
+<!-- Group Name -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold sora text-on-surface-variant px-1" for="group_name">Group Name</label>
+<input class="w-full h-14 px-4 rounded-xl bg-surface-container-low border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary text-on-surface placeholder:text-outline transition-all duration-200" id="group_name" placeholder="e.g. Urban Explorers Club" type="text"/>
+</div>
+<!-- Group Description -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold sora text-on-surface-variant px-1" for="group_desc">Group Description</label>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-low border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary text-on-surface placeholder:text-outline transition-all duration-200 resize-none" id="group_desc" placeholder="Tell the community what this group is about..." rows="4"></textarea>
+</div>
+<!-- Privacy Toggle Section -->
+<div class="space-y-3">
+<label class="block text-sm font-semibold sora text-on-surface-variant px-1">Privacy Level</label>
+<div class="grid grid-cols-1 gap-3">
+<!-- Public Option -->
+<div class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" id="public" name="privacy" type="radio"/>
+<label class="flex items-center p-4 rounded-2xl bg-surface ring-1 ring-outline-variant peer-checked:ring-2 peer-checked:ring-primary peer-checked:bg-primary/5 transition-all duration-200" for="public">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center mr-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="public">public</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold sora text-sm text-on-surface">Public</h4>
+<p class="text-xs text-secondary">Anyone can join and see the content</p>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant peer-checked:border-primary flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+</label>
+</div>
+<!-- Private Option -->
+<div class="relative group cursor-pointer">
+<input class="peer sr-only" id="private" name="privacy" type="radio"/>
+<label class="flex items-center p-4 rounded-2xl bg-surface ring-1 ring-outline-variant peer-checked:ring-2 peer-checked:ring-primary peer-checked:bg-primary/5 transition-all duration-200" for="private">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center mr-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="lock">lock</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold sora text-sm text-on-surface">Private</h4>
+<p class="text-xs text-secondary">Approval needed for new members</p>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<!-- Radio visuals handled via CSS peers if possible, but keeping logic consistent -->
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Continue Button -->
+<div class="pt-4">
+<button class="w-full h-14 bg-primary text-white font-bold sora rounded-xl shadow-[0_4px_12px_rgba(249,115,22,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2">
+                    Continue
+                    <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-center mt-4 text-[11px] text-outline font-medium">You can edit these details later in settings.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (from JSON) -->
+<!-- Content logic: Feed is active -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] rounded-t-2xl border-t-[1px] border-white/5">
+<!-- Feed Tab (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 font-bold bg-orange-50 dark:bg-orange-900/20 rounded-xl px-3 py-1 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Feed</span>
+</a>
+<!-- News Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">News</span>
+</a>
+<!-- Reels Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="movie_filter">movie_filter</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Reels</span>
+</a>
+<!-- Charcha Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Charcha</span>
+</a>
+<!-- Market Tab -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Market</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Create Group - Saffron Horizon</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#f1f5f9",
+              "on-background": "#0f172a",
+              "tertiary-dim": "#694a00",
+              "surface-container-high": "#e2e8f0",
+              "error-container": "#fee2e2",
+              "secondary": "#475569",
+              "on-primary-fixed": "#431407",
+              "secondary-fixed-dim": "#e2e8f0",
+              "tertiary": "#0ea5e9",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#fbbf24",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#075985",
+              "on-surface-variant": "#475569",
+              "inverse-on-surface": "#f8fafc",
+              "on-primary-container": "#7c2d12",
+              "primary": "#FF6B35",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#991b1b",
+              "primary-container": "#FFF0EA",
+              "surface-tint": "#FF6B35",
+              "on-secondary-fixed-variant": "#334155",
+              "secondary-fixed": "#f1f5f9",
+              "surface-container": "#f1f5f9",
+              "secondary-dim": "#7c4000",
+              "surface-dim": "#f1f5f9",
+              "error": "#ef4444",
+              "outline": "#94a3b8",
+              "on-tertiary-fixed": "#082f49",
+              "on-surface": "#0f172a",
+              "surface-bright": "#ffffff",
+              "background": "#ffffff",
+              "surface": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#e2e8f0",
+              "on-secondary-fixed": "#0f172a",
+              "inverse-surface": "#1e293b",
+              "primary-fixed-dim": "#fed7aa",
+              "error-dim": "#b92902",
+              "on-secondary-container": "#1e293b",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "surface-container-low": "#f8fafc",
+              "surface-container-highest": "#cbd5e1",
+              "secondary-container": "#f1f5f9",
+              "on-primary-fixed-variant": "#9a3412",
+              "primary-dim": "#863800",
+              "primary-fixed": "#ffedd5",
+              "tertiary-fixed-dim": "#bae6fd",
+              "tertiary-fixed": "#e0f2fe",
+              "on-error": "#ffffff",
+              "tertiary-container": "#e0f2fe"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex items-center px-4 h-16 bg-white/80 backdrop-blur-md shadow-sm z-50">
+<div class="flex items-center gap-4 w-full">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600">arrow_back</span>
+</button>
+<h1 class="font-['Sora'] font-bold tracking-tight text-[18px] text-primary">Create Group</h1>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-2xl mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-8 flex items-center gap-2">
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-container-high"></div>
+<div class="ml-2 text-xs font-bold text-primary font-headline">STEP 2/3</div>
+</div>
+<section class="mb-10">
+<h2 class="font-headline font-bold text-xl tracking-tight mb-2 text-on-surface">Categorize your pulse</h2>
+<p class="text-secondary text-sm mb-6">Choose a category that best describes your community's vibe.</p>
+<!-- Category List Section -->
+<div class="space-y-4">
+<!-- Category Item 1 (Selected) -->
+<div class="rounded-xl border-2 border-primary bg-primary-container/30 overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left active:scale-[0.99] transition-transform">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined">sports_soccer</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-primary-container">Sports</span>
+</div>
+<span class="material-symbols-outlined text-primary">expand_less</span>
+</button>
+<div class="px-4 pb-4">
+<label class="block font-headline font-bold text-[10px] uppercase tracking-widest text-primary mb-2">Specific Sub-category</label>
+<div class="relative">
+<select class="w-full h-12 pl-4 pr-10 rounded-lg bg-white border-primary/20 focus:ring-2 focus:ring-primary appearance-none font-body text-sm text-on-surface">
+<option>Cricket Club</option>
+<option>Football Academy</option>
+<option>Badminton Group</option>
+<option>Local Running Club</option>
+<option>Yoga &amp; Fitness</option>
+</select>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Item 2 (Unselected) -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Food &amp; Culinary</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<!-- More Categories... -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Technology</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Arts &amp; Culture</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Wellness &amp; Health</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Finance &amp; Wealth</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">flight</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Travel &amp; Leisure</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Parenting</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Pets &amp; Animals</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">potted_plant</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Gardening</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">sports_esports</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Gaming</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Photography</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">music_note</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Music</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">apparel</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Fashion &amp; Style</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">auto_stories</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Books &amp; Reading</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">handyman</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">DIY &amp; Crafts</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Environment</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">History &amp; Heritage</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">science</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Science &amp; Space</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full flex items-center gap-4 p-4 text-left hover:bg-surface-container active:scale-[0.99] transition-all">
+<div class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined">self_improvement</span>
+</div>
+<div class="flex-1">
+<span class="font-headline font-bold text-sm text-on-surface">Spiritual</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="mb-10">
+<h2 class="font-headline font-bold text-xl tracking-tight mb-2 text-on-surface">Pin to Neighborhood</h2>
+<p class="text-secondary text-sm mb-6">Make it easy for locals in your colony to find you.</p>
+<div class="space-y-4">
+<!-- Location Search -->
+<div class="relative">
+<div class="absolute left-4 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 rounded-xl bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary focus:border-transparent font-body text-sm" placeholder="Search neighborhood or colony..." type="text"/>
+</div>
+<!-- Interactive Map Placeholder -->
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="detailed overhead map of a suburban residential neighborhood with grid-like streets and green parks in soft daylight" data-location="Indiranagar, Bangalore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfP7Pe2SNH9ZWWeSb-ULwEiOVSYmO9EvZTA29tITAR40ECOY9gJN_LNtLFBnhiIum5_gSI8eDC3_mNT2x5gNNCz-ipir87zV9bBRNKwWcUMRN6UgnALpATSrq2O-MMRfOV65cYxByc3Td3xVdnxw40XWpDxf-bH_zluiAgKep2WkJHGJlRbw68T3F4Toh2TVZKZckjlZKrLO0qq1BJtzowTwmgoyJNyx6jcfizDhq1SOPp5XI6bqxdAftm0_dh07y9sCX1QqLLb8A"/>
+<!-- Map Overlay UI -->
+<div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative flex flex-col items-center">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg animate-bounce">
+<span class="material-symbols-outlined">push_pin</span>
+</div>
+<div class="mt-2 bg-white px-3 py-1.5 rounded-lg shadow-md border border-outline-variant">
+<span class="font-headline font-bold text-xs">Sector 14, Urban Enclave</span>
+</div>
+</div>
+</div>
+<button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md text-slate-700 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<div class="flex flex-col gap-4">
+<button class="w-full h-14 bg-primary text-white rounded-xl font-headline font-bold text-base shadow-lg shadow-primary/20 hover:bg-orange-600 transition-all active:scale-[0.98]">
+                Continue to Branding
+            </button>
+<button class="w-full h-12 text-secondary font-headline font-bold text-sm hover:text-on-surface transition-colors">
+                Save Draft
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] rounded-t-2xl border-t-[1px] border-white/5">
+<!-- Feed Active -->
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-orange-50 rounded-xl px-3 py-1 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">News</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">movie_filter</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Reels</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Charcha</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Market</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nearly - Groups Discovery</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "error-container": "#fee2e2",
+              "surface-container-high": "#e2e8f0",
+              "on-tertiary": "#ffffff",
+              "background": "#ffffff",
+              "error-dim": "#b92902",
+              "on-tertiary-container": "#075985",
+              "surface": "#ffffff",
+              "primary-fixed-dim": "#fed7aa",
+              "primary": "#f97316",
+              "on-primary-fixed": "#431407",
+              "on-surface": "#0f172a",
+              "on-error-container": "#991b1b",
+              "on-secondary-fixed-variant": "#334155",
+              "surface-bright": "#ffffff",
+              "tertiary-dim": "#694a00",
+              "outline": "#94a3b8",
+              "surface-tint": "#f97316",
+              "secondary": "#475569",
+              "primary-fixed": "#ffedd5",
+              "on-tertiary-fixed-variant": "#0369a1",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#475569",
+              "tertiary-fixed-dim": "#bae6fd",
+              "on-secondary": "#ffffff",
+              "surface-container": "#f1f5f9",
+              "surface-variant": "#f1f5f9",
+              "on-secondary-container": "#1e293b",
+              "surface-container-low": "#f8fafc",
+              "on-background": "#0f172a",
+              "secondary-dim": "#7c4000",
+              "inverse-primary": "#fbbf24",
+              "secondary-fixed": "#f1f5f9",
+              "inverse-on-surface": "#f8fafc",
+              "tertiary-fixed": "#e0f2fe",
+              "error": "#ef4444",
+              "outline-variant": "#e2e8f0",
+              "inverse-surface": "#1e293b",
+              "tertiary": "#0ea5e9",
+              "primary-dim": "#863800",
+              "surface-container-highest": "#cbd5e1",
+              "primary-container": "#ffedd5",
+              "secondary-fixed-dim": "#e2e8f0",
+              "surface-dim": "#f1f5f9",
+              "secondary-container": "#f1f5f9",
+              "on-primary-fixed-variant": "#9a3412",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#082f49",
+              "tertiary-container": "#e0f2fe",
+              "on-secondary-fixed": "#0f172a",
+              "on-primary-container": "#7c2d12"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Sora"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Sora', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-white text-on-surface min-h-screen pb-20">
+<!-- TopAppBar Mapping -->
+<header class="fixed top-0 w-full h-16 bg-white/80 backdrop-blur-md z-50 shadow-sm flex items-center px-4">
+<div class="flex-1 flex items-center">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-slate-100 transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined text-slate-500" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="text-[18px] font-bold tracking-tight Sora text-slate-900">Messages</h1>
+</div>
+<div class="flex-1 flex items-center justify-end">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-slate-100 transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined text-orange-600" data-icon="group_add">group_add</span>
+</button>
+</div>
+</header>
+<main class="pt-16">
+<!-- Search & Filters -->
+<section class="px-4 mt-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-[20px]" data-icon="search">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="Search groups..." type="text"/>
+</div>
+<!-- Pill Navigation -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-4 -mx-4 px-4 mt-2">
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">All</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">DMs</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-primary text-white shadow-md shadow-primary/20">Groups</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">Activities</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">Events</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">Outings</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">Volunteers</button>
+</div>
+</section>
+<!-- My Groups Section -->
+<section class="mt-2 px-4">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-[18px] font-bold tracking-tight text-slate-900">My Groups</h2>
+<a class="text-xs font-semibold" href="#" style="color: #FF6B35;">Discover Groups</a>
+</div>
+<div class="space-y-4">
+<!-- Group Item 1 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative w-14 h-14 flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="vibrant community garden with diverse people working together under soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGJVdQAjkNIe7JX9nMhW3AG-O08tDo3mhfC5VoIQXyiz5XhSfQ6SWq4O0dcGuOl8PIYo1bt7tbBDES6O58wBVrRBnXJBO4_yXuyQjCW8xIbvLkdbTCPCuGv2aHX6q3y1TjsT4EzTru4ZTS4oQbkbq3sE_x5g1F4DubWQcC2mGXB4pNzxWMP0WwggJRa8NUE_P34gGzhMT2Hr043BVTJ1qmdq0_bi6ZWNlz2WjbAchul9LtswmWrfAjqUAXcdZKdQmTw1Opqa60Ydw"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex-1 border-b border-slate-50 pb-4 group-last:border-none">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 text-sm">Sector 12 Parents</h3>
+<span class="text-[10px] text-slate-400">12:45 PM</span>
+</div>
+<p class="text-[12px] text-slate-500 mt-0.5">842 members</p>
+<p class="text-[13px] text-slate-600 mt-1 line-clamp-1">Rahul: Does anyone know a good pediatrician nearby?</p>
+</div>
+</div>
+<!-- Group Item 2 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative w-14 h-14 flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="modern apartment building complex with sleek architectural lines and lush landscaped courtyards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBAeX8u5RS2WR7jur9TttQa0w9Eaeph0-blsFSk-X3y5-jCgM1WfzUL1m29jCoktTVB-a26xsMU-XO7vVhnbzZpaPQiG16ePAkmn9Iwf9R7BVJCAq5flZeJySDv26Uqtv_FBXYAdDy9FIvQ_OCJ3lihw1V-8NXc_-My8OD0DQdIIA-CEwpjnheG_ofOXVmiEC9FKI2v0t7NZAINteZXd66mkls9qsgAsjKsZ20OK60rahkycVgc2oMII_zvN1fTzjo7odyFuKOBJk"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-slate-300 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex-1 border-b border-slate-50 pb-4 group-last:border-none">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 text-sm">Block C Residents</h3>
+<span class="text-[10px] text-slate-400">Yesterday</span>
+</div>
+<p class="text-[12px] text-slate-500 mt-0.5">156 members</p>
+<p class="text-[13px] text-slate-600 mt-1 line-clamp-1">Priya: The water supply maintenance is scheduled for tomorrow.</p>
+</div>
+</div>
+<!-- Group Item 3 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative w-14 h-14 flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="serene outdoor yoga class at sunrise with participants in silhouettes against a golden sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiLykfOyq80Cum0CfJEkt1mqxEGXP95TO6Z9nEuRdnOO5BlR1bk5KSBIo84n4IFXFFWbVsZEhSfce-5eUD2cD4fd-j8YISy-b1cPMt8SaQtQMXJ5J6VodaBD0gs_6DG9YyD4VfjnZUOdMMc3OGmThZleXxE-N1eP-rRVHz74pbaBfOCABalPxCBgFEu9dpAfj0rhjjpgr4mQUx9FkfWCZrO2l3BoqMn7oB3JNQ5u0RCS4F8SisCXaxVpPFOvpS7fS1ujjXtKGQtWc"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex-1 border-b border-slate-50 pb-4 group-last:border-none">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 text-sm">Morning Yoga Circle</h3>
+<span class="text-[10px] text-slate-400">Tue</span>
+</div>
+<p class="text-[12px] text-slate-500 mt-0.5">42 members</p>
+<p class="text-[13px] text-slate-600 mt-1 line-clamp-1">Amit: Great session today! See you all on Thursday morning.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Discover Groups Section -->
+<section class="mt-8 mb-8">
+<div class="px-4 flex justify-between items-center mb-4">
+<h2 class="text-[18px] font-bold tracking-tight text-slate-900">Discover Groups</h2>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar px-4">
+<!-- Discover Card 1 -->
+<div class="min-w-[260px] max-w-[260px] bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-200">
+<div class="h-32 relative">
+<img class="w-full h-full object-cover" data-alt="spread of delicious traditional Indian street food in colorful clay bowls on a rustic table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXlqV6SaC1iS1HqTPKm193qNwB7tnrs1Cd2MYTTXulk3VHuQUs13eOP1UCfBBe78zVzvyQ_e8njILdPPiMOgh2ZMg29T2micfwNKYqHyv-67j5mTiOpMCAlDEp6Se71SseiCTVi2vIPLfek276fU__CLMLt04he-KSgYulvfhT3HY2tuVGFSeoiHchTerMQi6pUcikUoxU4Uh2Ax-xDUgs0lpPQXE-wlCJy7CWkjaM4_IqgBJ_CdwlTZbsODC26jtNpwA-_U6mN_Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="groups">groups</span>
+<span class="text-[11px] font-medium">2.4k members</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-bold text-slate-900 mb-1 Sora">Indore Foodies</h3>
+<p class="text-[12px] text-slate-500 line-clamp-2 mb-4 leading-relaxed">Discovering the hidden culinary gems of the city. Join our weekly food crawls!</p>
+<button class="mt-auto w-full py-2.5 bg-primary text-white text-xs font-bold rounded-lg shadow-lg shadow-primary/20 active:scale-95 transition-all">Join Group</button>
+</div>
+</div>
+<!-- Discover Card 2 -->
+<div class="min-w-[260px] max-w-[260px] bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-200">
+<div class="h-32 relative">
+<img class="w-full h-full object-cover" data-alt="group of hikers walking through a sun-dappled forest path with majestic trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5mcoa2AL0CvN_aIw-YcgdU-lPGqy-P0rnhiXmG_yxu2wqyQfCBbOLs--Ec9GWLGjVTSH_-V4hL9Ie32VYDeebDO4Y46N6aOdFmZ9r6auhOEuiQTTwVIra0qyYX-Mkgzi-fZs8CiLPXqHBlLTzEFyVqZJaLEhVujiTsfJh67S1dsj6UX_cr1-4Lh19qeshgiUDLIDTosf__aSmoylwvSLTXpHNtVjD4Osx5Wzpjr6hEtJQO161qY3RTUio64samQjNC95v_8F7UU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="groups">groups</span>
+<span class="text-[11px] font-medium">1.1k members</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-bold text-slate-900 mb-1 Sora">Weekend Walkers</h3>
+<p class="text-[12px] text-slate-500 line-clamp-2 mb-4 leading-relaxed">Exploring local trails and parks. Every Saturday morning at 7:00 AM sharp.</p>
+<button class="mt-auto w-full py-2.5 bg-primary text-white text-xs font-bold rounded-lg shadow-lg shadow-primary/20 active:scale-95 transition-all">Join Group</button>
+</div>
+</div>
+<!-- Discover Card 3 -->
+<div class="min-w-[260px] max-w-[260px] bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-200">
+<div class="h-32 relative">
+<img class="w-full h-full object-cover" data-alt="close-up of vibrant succulents and small plants in a community rooftop garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMp8z-gzw4hWm3h_G2nsHFfGGHy3D1oQqwgWvSBoCXYpUMv9SIBsO9F2gyFrJDVi0oVx1aJhcJwVV78hIMDb_XnOUs0mUbNKx3PsA22lOpHjYgzApxutXrzo7chZEm4cWGjh44BKmP5-jZEcwDKO9bWvgvPqjyrmIEboDi16aTb87t5T4PTiIaat9LsnLk_thiApOjeuKFwvC2fNd7otazn4Ch6gkBd6U_HibmmAxB2wv4FLlQg_5BZzODq_qFhoO0MaP-Dinvi4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="groups">groups</span>
+<span class="text-[11px] font-medium">850 members</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-bold text-slate-900 mb-1 Sora">Green Thumbs</h3>
+<p class="text-[12px] text-slate-500 line-clamp-2 mb-4 leading-relaxed">Community for gardening enthusiasts. Share tips, seeds, and plant care advice.</p>
+<button class="mt-auto w-full py-2.5 bg-primary text-white text-xs font-bold rounded-lg shadow-lg shadow-primary/20 active:scale-95 transition-all">Join Group</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Mapping -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center px-4 pb-safe h-16 bg-white/80 backdrop-blur-md z-50 border-t border-slate-100/5 shadow-lg">
+<!-- Feed / Home -->
+<a class="flex flex-col items-center justify-center text-slate-500 group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform duration-200" data-icon="home">home</span>
+<span class="text-[10px] font-medium mt-0.5 Sora">Feed</span>
+</a>
+<!-- News / Explore -->
+<a class="flex flex-col items-center justify-center text-slate-500 group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform duration-200" data-icon="explore">explore</span>
+<span class="text-[10px] font-medium mt-0.5 Sora">News</span>
+</a>
+<!-- Reels / Videos -->
+<a class="flex flex-col items-center justify-center text-slate-500 group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform duration-200" data-icon="play_circle">play_circle</span>
+<span class="text-[10px] font-medium mt-0.5 Sora">Reels</span>
+</a>
+<!-- Charcha / Messages -->
+<a class="flex flex-col items-center justify-center text-orange-600 font-bold group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform duration-200" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="text-[10px] font-medium mt-0.5 Sora">Charcha</span>
+</a>
+<!-- Market / Profile -->
+<a class="flex flex-col items-center justify-center text-slate-500 group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform duration-200" data-icon="storefront">storefront</span>
+<span class="text-[10px] font-medium mt-0.5 Sora">Market</span>
+</a>
+</nav>
+</body></html>

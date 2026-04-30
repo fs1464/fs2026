@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Share Reels - Saffron Horizon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#075985",
+                        "inverse-primary": "#fbbf24",
+                        "surface-container-lowest": "#ffffff",
+                        "error-dim": "#b92902",
+                        "primary-dim": "#863800",
+                        "surface-bright": "#ffffff",
+                        "on-tertiary-fixed": "#082f49",
+                        "on-background": "#0f172a",
+                        "error": "#ef4444",
+                        "on-tertiary-fixed-variant": "#0369a1",
+                        "on-secondary-container": "#1e293b",
+                        "surface-container": "#f1f5f9",
+                        "error-container": "#fee2e2",
+                        "surface-tint": "#f97316",
+                        "secondary-fixed": "#f1f5f9",
+                        "tertiary-fixed": "#e0f2fe",
+                        "tertiary-dim": "#694a00",
+                        "surface-container-high": "#e2e8f0",
+                        "on-primary-fixed": "#431407",
+                        "inverse-on-surface": "#f8fafc",
+                        "outline-variant": "#e2e8f0",
+                        "inverse-surface": "#1e293b",
+                        "secondary-dim": "#7c4000",
+                        "surface-container-highest": "#cbd5e1",
+                        "secondary-container": "#f1f5f9",
+                        "on-surface": "#0f172a",
+                        "tertiary": "#0ea5e9",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#7c2d12",
+                        "surface": "#ffffff",
+                        "primary-container": "#ffedd5",
+                        "tertiary-fixed-dim": "#bae6fd",
+                        "on-primary-fixed-variant": "#9a3412",
+                        "tertiary-container": "#e0f2fe",
+                        "primary-fixed": "#ffedd5",
+                        "surface-container-low": "#f8fafc",
+                        "primary": "#f97316",
+                        "on-secondary-fixed-variant": "#334155",
+                        "secondary-fixed-dim": "#e2e8f0",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#991b1b",
+                        "surface-dim": "#f1f5f9",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#0f172a",
+                        "surface-variant": "#f1f5f9",
+                        "outline": "#94a3b8",
+                        "primary-fixed-dim": "#fed7aa",
+                        "secondary": "#475569"
+                    },
+                    fontFamily: {
+                        "headline": ["Sora"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 font-body text-on-surface antialiased">
+<!-- Mock Background Content (Reel context) -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover brightness-50" data-alt="cinematic close-up of a golden sunset over a busy urban skyline with lens flare and soft bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAugaoesvFdh3VYG_kg84lKnyfWddtyu69DRSo2_nEKIsrcWrFfMkiDpZgQD8O99phjiniiRWJTOX9ZZ6a6LCfWDmBIZiVFkT36MzKnZ2hvmf_YwNapKQF_9NQKT4txhwkZGKR7Mt4uK5ZRt1UTAoQIao3WzBDMxGtTLxwC8eETHmd3vny2YjqzxNcG6Cy80MuypzoHVoyyXtGZ05Eh4agqSGTDyJZoWcxTFkRQE6JYZOmsGg6wFucMhpjJ_RkuinDXkvr0c61fcBY"/>
+</div>
+<!-- Bottom Sheet Container -->
+<div class="fixed inset-0 z-50 flex items-end justify-center pointer-events-none">
+<div class="w-full max-w-lg bg-surface rounded-t-2xl shadow-2xl pointer-events-auto flex flex-col h-[751px] overflow-hidden">
+<!-- Grab Handle -->
+<div class="flex justify-center py-3">
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full"></div>
+</div>
+<!-- TopAppBar Internal Mapping -->
+<header class="flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-3 flex-1">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container transition-colors p-2 rounded-full">arrow_back</button>
+<div class="flex-1 bg-surface-container-low rounded-xl px-4 py-2 flex items-center gap-2 border border-outline-variant/30">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body w-full placeholder:text-outline" placeholder="Search friends and groups..." type="text"/>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto hide-scrollbar">
+<!-- Internal Sharing: Recent (Horizontal Scroll) -->
+<section class="py-4">
+<div class="px-4 mb-4">
+<h2 class="font-headline font-bold text-lg tracking-tight text-on-surface">Recent</h2>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 hide-scrollbar pb-2">
+<!-- User Item -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 w-20 group">
+<div class="relative">
+<img class="w-16 h-16 rounded-full border-2 border-primary object-cover transition-transform group-active:scale-95" data-alt="portrait of a smiling woman with curly hair against a soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDS_R0RbLdBO3SnnzFeQ2u33MWwkuQk0c0A8SsdB_hOpryzeqixAhwdDyeOtnbVnNJmpvYCCs1gjeerOPWetELoEC_lFgK_wtT5e1x-rzwNOnJtUeXI7BP1srEEFj7tbrRX7gAwvhhHSVDEo-H5P80MeUBiqlW6YmXsTq63ReFUmvBQ7rrt05mHiFeQXlQM-_-RQhdOZUIOrEL_UoYVRsh4FRc8sXG9meDjMyedmayStmRiD1E9kA0QIZuP-jkBmJ3mIvQ1--rsY"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<span class="text-[11px] font-medium text-center truncate w-full">Sasha K.</span>
+</div>
+<!-- Group Item -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 w-20 group">
+<div class="relative">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+</div>
+<span class="text-[11px] font-medium text-center truncate w-full">Foodies Club</span>
+</div>
+<!-- More Users -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 w-20 group">
+<img class="w-16 h-16 rounded-full object-cover transition-transform group-active:scale-95" data-alt="candid street style portrait of a man looking at the camera in urban daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO3r27xr20SXO03GuSy5G3RvFWG8J-5lwUfC5RDvXjH6RBwY-JrmOGprzmAO_fU22-XnVSI0a-gRHdhK0Y9OOsYWB08rFB0qEzlKdVngMryiKheUjSLBbbBJRW1v1R47OVGXx7hxrm6qcZ6wVj6OXCVjRKvsNU3AME24gtBPZQNWnRWKlq1FnbSc12Cz9YEWj0vU7sAX8mQuhZbGRLq3ERIR7DCWABluj68SBxH-2V_aaONTgBZtY_Qc3pu6Benf6L8Ugl9-qPw8U"/>
+<span class="text-[11px] font-medium text-center truncate w-full">Marcus V.</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-shrink-0 w-20 group">
+<img class="w-16 h-16 rounded-full object-cover transition-transform group-active:scale-95" data-alt="close-up portrait of a young professional man in a casual white shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5xqxKSI1ekZm_-MvFs480o_I8r1-tpu6Ry7piIuAcdwMrK135VYqngZsHK1j3dKKRtvKw7Qcx0d1toezRFDK-nqMKhk1Fe3DMHoWwdBfhMu3rMdFFVUpM1WT2JxyrLUMux-5eOLNLhhyZCjVRHcU2NE4W7oG31S8kyv2ecAwHFlONS9m4FeP7htFull2FiS4hgMPhQnYo3wiMBTLWZcXpvpo6eTUJesPZ48WfbJPPrLTkNTVR1LcWL_Ykg_bw8U0Eu3WKZnNjI0g"/>
+<span class="text-[11px] font-medium text-center truncate w-full">James L.</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-shrink-0 w-20 group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">more_horiz</span>
+</div>
+<span class="text-[11px] font-medium text-center truncate w-full">See More</span>
+</div>
+</div>
+</section>
+<!-- Internal Sharing: Suggested (Vertical List) -->
+<section class="px-4 py-4">
+<div class="mb-4">
+<h2 class="font-headline font-bold text-lg tracking-tight text-on-surface">Share to Groups</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">sports_cricket</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Sector 12 Cricket Toli</span>
+<span class="text-xs text-on-surface-variant">24 members</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Indore Foodies</span>
+<span class="text-xs text-on-surface-variant">156 members</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+</div>
+</section><section class="px-4 py-4">
+<div class="mb-4">
+<h2 class="font-headline font-bold text-lg tracking-tight text-on-surface">Suggested</h2>
+</div>
+<div class="space-y-4">
+<!-- Suggested Item -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="portrait of a stylish young woman with neon city lights in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUonsNFdCH3vJxxmPTbYSH2tjvA4U09ZU50U1cxRmLGw3I2RN34f5bksF71tewZYmh-QL1zasdl9GxMcJdvmyysVAcN90aNYmmA3WgiqBqG3XLEVS2Imsk8cAtLkkTw2SLeA4Rg_L6OPcdgCdrewzT_tILPzzjOe9BILQ6PJNewx3iCdNuZtdeoHhs11h_s4dA1AOvxxQMy3BoPzf7eezGOCDKOHGXHv0U1ePyXn-3B_iRpOVaV2QcOeFS6W0KHmVdLQja5Vc-rF0"/>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Elena Rivera</span>
+<span class="text-xs text-on-surface-variant">@elenariv</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+<!-- Suggested Item -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional headshot of a smiling man with sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnh80BpsFNV96oe3uIoVWsVl9BYQ9bLRCnDij_tMjg8OQia1v8mDHHvHK22sQqDQxMC7OpzwCdu0N5rf8LBHWhIcgOprdvsopC5MPyJv0U9QZgqFFF5xGuR_MTWhFHGxW85AiJ9YMcIhtKdKPY4Ro3oPyewg75fpIc_yiY-3bLhSKcF9X5l9xBJbcbvxFfw3TKlRNf8PwAeoAJtF4ha2GSSvPbjPl7wmkjapCjaCdCdNn623HFjihsmkbgVZu0jpp7wwVLgP3m6I0"/>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Daniel Choi</span>
+<span class="text-xs text-on-surface-variant">@danchoi_design</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+<!-- Suggested Item -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">celebration</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Weekend Warriors</span>
+<span class="text-xs text-on-surface-variant">12 members</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+<!-- Suggested Item -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="brightly lit portrait of a laughing woman with vibrant skin tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwU7N58nna65qwzSwFOE6r9SO8TGRRKx1rwz9XL5TqDGxg45lMsEoN65KeH9Fa8F8B8iOAepvvSRFv3jSilaNkLE4C0I8DIuv-oWdDzxMUYQQ-8DNGL4pZ4_NmclC0wqhBuXPPe3LRzVYAs3l9PZAT-1Tv1tjQ-LVIzW1TnZBmzh3aI9AB6ziNZAuQiFUCTn4dMopkhY6UWmkFdTYrTwyRzjgloQGS1BkGum1vNKSapZGAndNbBEBno_W4vgY_sXgls7ub8kreuSc"/>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm text-on-surface">Sarah Jenkins</span>
+<span class="text-xs text-on-surface-variant">@sarah_j</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-headline text-xs font-bold px-5 py-2 rounded-xl transition-all active:scale-95">Send</button>
+</div>
+</div>
+</section>
+<!-- External Sharing Section -->
+<section class="mt-4 pt-6 pb-20 border-t border-slate-100">
+<div class="px-4 mb-4">
+<h2 class="font-headline font-bold text-lg tracking-tight text-on-surface">External Share</h2>
+</div>
+<div class="flex overflow-x-auto gap-6 px-4 hide-scrollbar pb-4">
+<!-- WhatsApp -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">WhatsApp</span>
+</div>
+<!-- Instagram -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">camera</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Instagram</span>
+</div>
+<!-- Facebook -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-[#1877F2] flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Facebook</span>
+</div>
+<!-- Messages -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-3xl">sms</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Messages</span>
+</div>
+<!-- Copy Link -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-3xl">link</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Copy Link</span>
+</div>
+<!-- More -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 shadow-sm">
+<span class="material-symbols-outlined text-3xl">more_horiz</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">More</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Action Footer (Implicit in Design) -->
+<div class="p-4 bg-surface-container-low/50 backdrop-blur-sm border-t border-outline-variant/10">
+<button class="w-full bg-primary text-white font-headline font-bold py-4 rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">Done</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+  }
+}
+
+/* ==========================================
+   Nearly — Global Design Rules
+   ========================================== */
+
+/* Global Focus Outline Fix */
+input, textarea, [contenteditable], button, select {
+  outline: none !important;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+/* ==========================================
+   Standardized Font Sizing (matches News section)
+   Use these utility classes across all screens.
+   ========================================== */
+
+@layer utilities {
+  /* Page title — Instagram-style bold heading */
+  .nearly-page-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1A1A2E;
+    line-height: 1.2;
+  }
+
+  /* Section title — card / section headings */
+  .nearly-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A2E;
+    line-height: 1.3;
+  }
+
+  /* Body text — standard readable text */
+  .nearly-body-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.5;
+  }
+
+  /* Label text — buttons, chips, tab labels */
+  .nearly-label-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+  }
+
+  /* Caption text — timestamps, metadata */
+  .nearly-caption-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6C757D;
+  }
+
+  /* Small text — fine print, badges */
+  .nearly-small-text {
+    font-size: 11px;
+    font-weight: 400;
+    color: #ADB5BD;
+  }
+
+  /* ========================================
+     Filter Pill Styles (Consistent across app)
+     ======================================== */
+
+  /* Active filter pill — Orange */
+  .nearly-filter-active {
+    background-color: #FF6B35;
+    border-color: #FF6B35;
+  }
+
+  /* Inactive filter pill — Transparent with border */
+  .nearly-filter-inactive {
+    background-color: transparent;
+    border-color: #E9ECEF;
+  }
+}

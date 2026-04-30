@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saffron Horizon - Add Members</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Be_Vietnam_Pro:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#f1f5f9",
+                        "on-background": "#0f172a",
+                        "tertiary-dim": "#694a00",
+                        "surface-container-high": "#e2e8f0",
+                        "error-container": "#fee2e2",
+                        "secondary": "#475569",
+                        "on-primary-fixed": "#431407",
+                        "secondary-fixed-dim": "#e2e8f0",
+                        "tertiary": "#0ea5e9",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#fbbf24",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#075985",
+                        "on-surface-variant": "#475569",
+                        "inverse-on-surface": "#f8fafc",
+                        "on-primary-container": "#7c2d12",
+                        "primary": "#f97316",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#991b1b",
+                        "primary-container": "#ffedd5",
+                        "surface-tint": "#f97316",
+                        "on-secondary-fixed-variant": "#334155",
+                        "secondary-fixed": "#f1f5f9",
+                        "surface-container": "#f1f5f9",
+                        "secondary-dim": "#7c4000",
+                        "surface-dim": "#f1f5f9",
+                        "error": "#ef4444",
+                        "outline": "#94a3b8",
+                        "on-tertiary-fixed": "#082f49",
+                        "on-surface": "#0f172a",
+                        "surface-bright": "#ffffff",
+                        "background": "#ffffff",
+                        "surface": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#e2e8f0",
+                        "on-secondary-fixed": "#0f172a",
+                        "inverse-surface": "#1e293b",
+                        "primary-fixed-dim": "#fed7aa",
+                        "error-dim": "#b92902",
+                        "on-secondary-container": "#1e293b",
+                        "on-tertiary-fixed-variant": "#0369a1",
+                        "surface-container-low": "#f8fafc",
+                        "surface-container-highest": "#cbd5e1",
+                        "secondary-container": "#f1f5f9",
+                        "on-primary-fixed-variant": "#9a3412",
+                        "primary-dim": "#863800",
+                        "primary-fixed": "#ffedd5",
+                        "tertiary-fixed-dim": "#bae6fd",
+                        "tertiary-fixed": "#e0f2fe",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#e0f2fe"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .sora-font { font-family: 'Sora', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex items-center px-4 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 shadow-sm dark:shadow-none">
+<button class="mr-4 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Sora'] font-bold tracking-tight text-[18px] text-orange-600 dark:text-orange-400">Add Members</h1>
+<div class="ml-auto">
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-full font-headline font-bold text-sm active:scale-95 duration-150 shadow-md shadow-primary/20">
+                Done
+            </button>
+</div>
+</header>
+<main class="pt-20 pb-32 max-w-2xl mx-auto px-4">
+<!-- Selected Members Avatar Strip -->
+<section class="mb-8 overflow-hidden">
+<h2 class="text-[12px] font-bold uppercase tracking-wider text-slate-400 mb-4 px-1">Selected Members (4)</h2>
+<div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+<div class="flex flex-col items-center gap-1 min-w-[64px] group">
+<div class="relative">
+<img alt="" class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary ring-offset-2" data-alt="portrait of a smiling woman with glasses in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU992f4abpuHe1VYNBja8Z_1iQijaEYoldRQxov15vZFw60r8mFwPUZSIsW_oyrH1O0BhZYfaVAtRHCAE4R88gro_pW2Ox0Wxb-ZwxAuK55jQy_x5MOGVkbz9jA1kPrRSKs49YgIUrGQ9awiB6n4MFKv1T5KmEKuF1kTzmb-qHIHEvdeC0aDmxLAub9qVunHYtZgWpvX1cZS_bRlnRjULgDpmynCuha-OtO-d-u0Mo_0wm1ib10ihPTEjvfQv8yd8p9w3V1hr3khI"/>
+<button class="absolute -top-1 -right-1 bg-on-background text-white rounded-full p-0.5 border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="close">close</span>
+</button>
+</div>
+<span class="text-[11px] font-medium text-on-surface truncate w-14 text-center">Anita</span>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[64px]">
+<div class="relative">
+<img alt="" class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary ring-offset-2" data-alt="headshot of a bearded young man in a blue linen shirt with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0lriGgI3la1x9THozSNdRmyNQyqNDoYG6ykczHEEHMCk-gU7zNaD6EHnnxMaOI-7H7nZCHEw5tNjGl6tU5ETY32RhB0ozyurbo_Bz3HFXECO13XjpVzqoKP5WDyJb5ex294J_4w-9vC44ec7Xxlm0s_QAJECRNhCVbNQJUSHpJqYdRBa6LCZ694W34kdEAChq1JTVicQQWq8GjF_LPGxEa2MVZMbWzixc5CKwYgwQMJFYbreoihzInOcflGoCvUCXLUj2MFrJK-o"/>
+<button class="absolute -top-1 -right-1 bg-on-background text-white rounded-full p-0.5 border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="close">close</span>
+</button>
+</div>
+<span class="text-[11px] font-medium text-on-surface truncate w-14 text-center">Rohan</span>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[64px]">
+<div class="relative">
+<img alt="" class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary ring-offset-2" data-alt="close up portrait of a young woman with curly hair smiling in a park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoGMPAVdOZLVUv7-GeF_TF6rsaQ7ng2U46iEe4ZMfWptNz_nK1JZW4sYOtoQqK9pZQePpzvZJahnhgyGSfsYRDMuu-ZNIPCcdVJieDJEFDUdld3-wAsKSHOsYjl2WKg4CNXg-KbqJCgoPHbThzGGon3weSJuE83OD3QqBhrXDcm7eO0bEuG1Dx1QRjoB1RNHleYV4-qexX_JBogYa_o3I6WMMsktmnsAg9I0w9I2q-HbyYK1vnEBoIzhdUIaOKx3ONYjl6Kygkxy0"/>
+<button class="absolute -top-1 -right-1 bg-on-background text-white rounded-full p-0.5 border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="close">close</span>
+</button>
+</div>
+<span class="text-[11px] font-medium text-on-surface truncate w-14 text-center">Priya</span>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[64px]">
+<div class="relative">
+<img alt="" class="w-14 h-14 rounded-2xl object-cover ring-2 ring-primary ring-offset-2" data-alt="portrait of a man with short hair looking at the camera outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY7as82buRwzK2AUklqbju9-tDcUqhLwFe5sC9tz__UtyWHlFwfjbqZVfCVRYuw6faG3ZwCDI2fsYRbUBZhuqm9zXpJZkyBdDiKMHMsKra8_yRprnPm5oI5exzGeMWHK_6GsdaNI13-dTiRa92Au3wlJNsBN5jdaaehup2JxYNTVZNXVusArqMC4GDHW5e9imLerwtr3FGNP1_XS4IIQ7z719aqeVvBLyrTd1dfVjphr4wq6TbHMXu_H-DhZCsiI6LeppHI3Ns1Hk"/>
+<button class="absolute -top-1 -right-1 bg-on-background text-white rounded-full p-0.5 border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="close">close</span>
+</button>
+</div>
+<span class="text-[11px] font-medium text-on-surface truncate w-14 text-center">Vikram</span>
+</div>
+</div>
+</section>
+<!-- Search Contacts Bar -->
+<div class="relative mb-8">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all sora-font" placeholder="Search neighbors or contacts..." type="text"/>
+</div>
+<!-- Local Contacts List -->
+<section class="mb-10">
+<h3 class="font-headline font-bold text-lg mb-4 flex items-center gap-2">
+                Neighbors Nearby
+                <span class="text-xs font-medium bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full">32 Active</span>
+</h3>
+<div class="space-y-1">
+<!-- Contact Item -->
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-low rounded-xl transition-colors cursor-pointer group">
+<img alt="" class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of a smiling man with a neat beard in casual clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgvy-ai-galird7V-F7uOF5CyW6Jgi-u6JF0qda4G9UF38vW1dYNBNVcs1Q3DzpwhCHdZrTJRXiw8SYoa8eIcvSH1S2N9Knx4ZEgZZ6-dVFYMZ3GuBo3jBRHu8eMBLEr0l7U7c1FoCpsokcD0UoENKrkz9A6afJEmNe-RTuPiF_4ivPFJQ05jH_srtXX3le0Ry8mCZMzu501r_xm2ehvTxHA4wzppWXV2AevG0cYy7S1LXvX8bbY9KrjLU30ubei5wpz6zagBWZqg"/>
+<div class="flex-1 min-w-0">
+<p class="font-bold text-on-surface sora-font truncate">Amit Sharma</p>
+<p class="text-xs text-secondary truncate">Sector 14, Resident • 200m away</p>
+</div>
+<div class="relative flex items-center justify-center">
+<input checked="" class="w-6 h-6 rounded-lg text-primary focus:ring-primary border-outline-variant cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-low rounded-xl transition-colors cursor-pointer group">
+<img alt="" class="w-12 h-12 rounded-xl object-cover" data-alt="profile of a professional woman in a grey blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs7dJ5f_SsD6yAEuSkoocGLh8MhcqVT56yC329fzW6_hdFIIlpJddk-SqCyhsLq48-zoixayTDdY1dVgekLk6cP2QTFSqvifdrNYRzk63eBXUzVPz2cWuW4Kq0emNhYEEVZfD4252Eh27cDg4nDh36lb5lXlY3VahsLH1-vlf_YpWS0UL_6kOQ3Eq8okR_1Cbc6m7TVI5_GNr20dliPPCShq81nBjZHYKUmTdEZe4RbEybFEEuoM3HvukWKSJIJ3v2nL9reX_sTEg"/>
+<div class="flex-1 min-w-0">
+<p class="font-bold text-on-surface sora-font truncate">Neha Kapoor</p>
+<p class="text-xs text-secondary truncate">Green View Apts • 450m away</p>
+</div>
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-lg text-primary focus:ring-primary border-outline-variant cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-low rounded-xl transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center text-on-tertiary-container font-bold sora-font">RK</div>
+<div class="flex-1 min-w-0">
+<p class="font-bold text-on-surface sora-font truncate">Rajesh Kumar</p>
+<p class="text-xs text-secondary truncate">The Imperial Suites • 1.2km away</p>
+</div>
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-lg text-primary focus:ring-primary border-outline-variant cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-low rounded-xl transition-colors cursor-pointer group">
+<img alt="" class="w-12 h-12 rounded-xl object-cover" data-alt="young man with short dark hair in a casual white t-shirt looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQgWQICVgcF5jM4CZ3wpIbqYha3AFwNjX3Haqq0QGrSpHgoAFqFojiWCRCGcrZTri1UebDa7ao5N0C3POmGvKg2WcJVJYtJucynElxXftABcvFA44PfEB0XXg_-cd42KXrxRZo3r_n4sMwto2OLlCFfPo63fhkb7YD8dD1xPM5BUdNTdMr3ZLK-EHVahclTUjI_RtypAhc0ZORJ0rVa34fQjPixHET3EoYZ1fPw9NYEksCQcSMo2DJzN7LcOYp-qmJOv68cNsIIM4"/>
+<div class="flex-1 min-w-0">
+<p class="font-bold text-on-surface sora-font truncate">Siddharth V.</p>
+<p class="text-xs text-secondary truncate">Sector 14, Resident • 300m away</p>
+</div>
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-lg text-primary focus:ring-primary border-outline-variant cursor-pointer" type="checkbox"/>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-primary font-bold text-sm hover:bg-primary/5 rounded-lg transition-colors">Show more contacts</button>
+</section>
+<!-- Invite via Link Section -->
+<section class="mb-10 bg-surface-container-low p-6 rounded-2xl">
+<h3 class="font-headline font-bold text-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500" data-icon="link">link</span>
+                Invite via Link
+            </h3>
+<div class="grid grid-cols-4 gap-4">
+<button class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+<span class="text-[10px] font-bold text-secondary">WhatsApp</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</div>
+<span class="text-[10px] font-bold text-secondary">Instagram</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+</div>
+<span class="text-[10px] font-bold text-secondary">Facebook</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-2xl flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="sms">sms</span>
+</div>
+<span class="text-[10px] font-bold text-secondary">Messages</span>
+</button>
+</div>
+</section>
+<!-- Share in Nearly Section -->
+<section class="mb-20">
+<h3 class="font-headline font-bold text-md mb-4 px-1">Share in Nearly</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-4 bg-white border border-outline-variant/30 rounded-2xl shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="groups">groups</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold sora-font">Sector 14 Welfare Assoc.</p>
+<p class="text-[11px] text-secondary">856 members</p>
+</div>
+<button class="text-xs font-bold text-primary border border-primary px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all">Share</button>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white border border-outline-variant/30 rounded-2xl shadow-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]" data-icon="bolt">bolt</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold sora-font">Morning Walkers Elite</p>
+<p class="text-[11px] text-secondary">42 members</p>
+</div>
+<button class="text-xs font-bold text-primary border border-primary px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all">Share</button>
+</div>
+</div>
+</section>
+<!-- CTA Action Button -->
+<div class="fixed bottom-24 left-0 right-0 px-4 z-40 md:relative md:bottom-0 md:px-0">
+<button class="w-full bg-primary text-on-primary py-4 rounded-2xl font-headline font-extrabold text-lg shadow-lg shadow-primary/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Create Group
+                <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] rounded-t-2xl border-t-[1px] border-white/5">
+<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 font-bold bg-orange-50 dark:bg-orange-900/20 rounded-xl px-3 py-1 active:scale-90 duration-150 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">News</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="movie_filter">movie_filter</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Reels</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Charcha</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium">Market</span>
+</a>
+</nav>
+</body></html>
