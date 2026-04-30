@@ -12,6 +12,8 @@
     "types:generate": "npx supabase gen types typescript --project-id YOUR_PROJECT_ID > src/types/database.types.ts"
   },
   "dependencies": {
+    "@expo-google-fonts/be-vietnam-pro": "^0.4.1",
+    "@expo-google-fonts/sora": "^0.4.2",
     "@expo/metro-runtime": "~55.0.6",
     "@expo/vector-icons": "^15.1.1",
     "@hookform/resolvers": "^3.0.0",
