@@ -4,12 +4,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Plus, Search } from 'lucide-react-native';
 import { colors, fonts, spacing } from '@/design/tokens';
-import { SegmentedTabs, type FundingSegment } from '@/components/funding/SegmentedTabs';
-import { DealCard } from '@/components/funding/DealCard';
-import { CohortCard } from '@/components/funding/CohortCard';
-import { GrantCard } from '@/components/funding/GrantCard';
-import { CardSkeleton } from '@/components/funding/Skeleton';
-import { EmptyState } from '@/components/funding/EmptyState';
+import { SegmentedTabs, type FundingSegment } from '@/components/features/funding/SegmentedTabs';
+import { DealCard } from '@/components/features/funding/DealCard';
+import { CohortCard } from '@/components/features/funding/CohortCard';
+import { GrantCard } from '@/components/features/funding/GrantCard';
+import { CardSkeleton } from '@/components/features/funding/Skeleton';
+import { EmptyState } from '@/components/features/funding/EmptyState';
 import {
   useCohortsList,
   useDealsList,
